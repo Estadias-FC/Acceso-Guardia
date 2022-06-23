@@ -19,13 +19,13 @@ class Regasistencia extends Migration
             $table->integer('NoEmp');
             $table->foreign('NoEmp')->references('NoEmp')->on('empleados');
 
-            $table->date('f_entrada');
-            $table->time('h_entrada');
-            $table->date('f_salida');
-            $table->time('h_salida');
-            $table->string('adscripcion',50);
-            $table->string('estatus',50);
-            $table->string('placas_vehiculos',50);
+            $table->date('f_entrada')->nullable(true);
+            $table->time('h_entrada')->nullable(true);
+            $table->date('f_salida')->nullable(true);
+            $table->time('h_salida')->nullable(true);
+            $table->string('adscripcion',50)->nullable(true);
+            $table->string('estatus',50)->nullable(true);
+            $table->string('placas_vehiculos',50)->nullable(true);
             
             $table->timestamps();
         });

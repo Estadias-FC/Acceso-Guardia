@@ -18,7 +18,7 @@ class ConsultaController extends Controller
     {
 
         $texto=trim($request->get('texto'));
-        $consultas =\DB::table('regasistencia')
+        $consultas =DB::table('regasistencia')
         ->select('regasistencia.*')
         ->where('Noemp','LIKE','%'.$texto.'%')
         ->orwhere('f_entrada','LIKE','%'.$texto.'%')
