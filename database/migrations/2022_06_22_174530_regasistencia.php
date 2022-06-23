@@ -19,8 +19,8 @@ class Regasistencia extends Migration
             $table->integer('NoEmp');
             $table->foreign('NoEmp')->references('NoEmp')->on('empleados');
 
-            $table->date('f_entrada')->nullable(true);
-            $table->time('h_entrada')->nullable(true);
+            $table->date('f_entrada');
+            $table->time('h_entrada');
             $table->date('f_salida')->nullable(true);
             $table->time('h_salida')->nullable(true);
             $table->string('adscripcion',50)->nullable(true);
