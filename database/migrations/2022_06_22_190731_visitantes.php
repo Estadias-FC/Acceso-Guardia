@@ -22,6 +22,7 @@ class Visitantes extends Migration
             $table->string('Nombre');
             $table->string('ApellidoPaterno');
             $table->string('ApellidoMaterno');
+            $table->date('Fecha');
             $table->string('Asunto');
             $table->string('Identificacion');
             $table->time('h_entrada');

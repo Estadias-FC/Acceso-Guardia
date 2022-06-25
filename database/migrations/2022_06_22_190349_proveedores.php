@@ -22,6 +22,7 @@ class Proveedores extends Migration
             $table->string('NombreProveedor');
             $table->string('Empresa');
             $table->string('Asunto');
+            $table->date('Fecha');
             $table->time('h_entrada');
             $table->time('h_salida');
             $table->timestamps();

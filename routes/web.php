@@ -45,3 +45,5 @@ Route::resource('observaciones', ObservacionesController::class)->middleware('au
 Route::resource('entrcom', EntrcomController::class)->middleware('auth');
 Route::resource('externo', ExternoController::class)->middleware('auth');
 Route::resource('consulta', ConsultaController::class)->middleware('auth');
+Route::resource('proveedores', App\Http\Controllers\ProveedorController::class)->middleware('auth');
+Route::resource('visitantes', App\Http\Controllers\VisitantesController::class)->middleware('auth');
