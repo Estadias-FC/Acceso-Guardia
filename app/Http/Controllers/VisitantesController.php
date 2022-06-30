@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class VisitantesController extends Controller
 {
     public function index() {
-        return view('crud.visitantes');
+        $datosVisitantes = Visitantes::all();
+        return view('crud.visitantes',compact('datosVisitantes'));
     }
 
     public function create()
@@ -28,14 +29,26 @@ class VisitantesController extends Controller
         //
     }
 
-    public function edit(Visitantes $visitantes)
+    public function edit($id)
     {
-        //
+        $datosVisitantes = Visitantes::find($id);
+        return view('crud.actualizar_visitante',compact('datosVisitantes'));
     }
 
-    public function update(Request $request, Visitantes $visitantes)
+    public function update(Request $request, $id)
     {
-        //
+        $datosVisitantes = Visitantes::find($id);
+        $datosVisitantes->Fecha = $request->post('Fecha');
+        $datosVisitantes->Nombre = $request->post('Nombre');
+        $datosVisitantes->ApellidoPaterno =$request->post('ApellidoPaterno');
+        $datosVisitantes->ApellidoMaterno=$request->post('ApellidoMaterno');
+        $datosVisitantes->Asunto=$request->post('Asunto');
+        $datosVisitantes->Identificacion=$request->post('Identificacion');
+        $datosVisitantes->h_entrada=$request->post('h_entrada');
+        $datosVisitantes->h_salida=$request->post('h_salida');
+        $datosVisitantes->save();
+
+        return redirect()->route('visitantes.index')->with('success','Actualizado con Exito!');
     }
 
     public function destroy(Visitantes $visitantes)

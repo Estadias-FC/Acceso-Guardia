@@ -24,7 +24,7 @@ class Proveedores extends Migration
             $table->string('Asunto');
             $table->date('Fecha');
             $table->time('h_entrada');
-            $table->time('h_salida');
+            $table->time('h_salida')->nullable(true);
             $table->timestamps();
         });
     }

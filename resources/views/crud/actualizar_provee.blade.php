@@ -8,7 +8,7 @@ date_default_timezone_set('America/Monterrey');
 $hora_actual=date("H:i:s");
 ?>
 
-<form action="{{route ('crud.update_provee', $datosProveedores->id) }}" method="POST" enctype="multipart/form-data">
+<form action="{{route ('proveedores.update', $datosProveedores->id) }}" method="POST" enctype="multipart/form-data">
 @csrf
 @method("PUT")
 <h1 class="text-center">Actualizar Proveedor</h1>
@@ -16,7 +16,7 @@ $hora_actual=date("H:i:s");
 
 <div class="form-group">
 <label for="Fecha">Fecha</label>
-<input type="date" class="form-control" name="fecha" value="{{$datosProveedores->fecha}}">
+<input type="date" class="form-control" name="fecha" value="{{$datosProveedores->Fecha}}">
 </div>
 
 <div class="form-group">

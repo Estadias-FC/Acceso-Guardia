@@ -26,7 +26,7 @@ class Visitantes extends Migration
             $table->string('Asunto');
             $table->string('Identificacion');
             $table->time('h_entrada');
-            $table->time('h_salida');
+            $table->time('h_salida')->nullable(true);
 
 
             $table->timestamps();

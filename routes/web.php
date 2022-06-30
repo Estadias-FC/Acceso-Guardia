@@ -8,6 +8,7 @@ use App\Http\Controllers\EntrcomController;
 use App\Http\Controllers\ExternoController;
 use App\Http\Controllers\ConsultaController;
 use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\VisitantesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,8 +25,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('acceso', [AccesoController::class, 'index'])->middleware('auth');
 Route::post('check_entry', [AccesoController::class, 'check_entry']);
 Route::post('refresh_table_registro', [AccesoController::class, 'refresh_table_registro']);
-Route::get('/edit/{id}', [ProveedorController::class,'edit'])->name('crud.actualizar_provee');
-Route::put('/update/{id}', [ProveedorController::class,'update'])->name('crud.update_provee');
+
+Route::put('/update/{id}', [ProveedorController::class,'update'])->name('crud.update_provees');
 
 
 Auth::routes();
@@ -51,4 +52,7 @@ Route::resource('consulta', ConsultaController::class)->middleware('auth');
 Route::resource('proveedores', App\Http\Controllers\ProveedorController::class)->middleware('auth');
 Route::resource('visitantes', App\Http\Controllers\VisitantesController::class)->middleware('auth');
 Route::get('/',[ProveedorController::class, 'index'])->name('Proveedores.index');
-Route::get('/edit/{id}', [ProveedorController::class,'edit'])->name('crud.actualizar_provee');
+
+
+Route::get('/edit/{id}',[VisitantesController::class,'edit'])->name('crud.actualizar_visitante');
+Route::put('/update/{id}',[VisitantesController::class,'update'])->name('crud.update_visita');

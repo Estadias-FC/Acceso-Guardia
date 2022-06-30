@@ -14,7 +14,7 @@ class Empleados extends Migration
     public function up()
     {
         Schema::create('empleados', function (Blueprint $table) {
-            $table->integer('NoEmp',5);
+            $table->integer('NoEmp',5)->nullable(true);
             $table->string('Grado',10);
             $table->string('NombreCompleto',60);
             $table->string('Adscripcion',80);

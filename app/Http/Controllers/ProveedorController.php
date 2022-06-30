@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Proveedores;
+use App\Models\EmpleadosModel;
+use Empleados;
 use Illuminate\Http\Request;
 
 class ProveedorController extends Controller
@@ -50,8 +52,6 @@ class ProveedorController extends Controller
         $datosProveedores->save();
 
         return redirect()->route("proveedores.index")->with("success", "Actualizado con Exito!");
-
-
     }
 
     public function destroy(Proveedores $proveedores)
