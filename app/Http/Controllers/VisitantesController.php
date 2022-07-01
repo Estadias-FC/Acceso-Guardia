@@ -21,7 +21,7 @@ class VisitantesController extends Controller
     {
         $datosVisitantes =request()->except('_token');
         Visitantes::insert($datosVisitantes);
-        return redirect('home')->with('mensaje','Registrado exitosamente');
+        return redirect('visitantes')->with('success','Registrado exitosamente');
     }
 
     public function show(Visitantes $visitantes)

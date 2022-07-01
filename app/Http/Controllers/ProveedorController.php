@@ -23,7 +23,7 @@ class ProveedorController extends Controller
     {
         $datosProveedores =request()->except('_token');
         Proveedores::insert($datosProveedores);
-        return redirect('home')->with('mensaje','Registrado exitosamente');
+        return redirect('proveedores')->with('success','Registrado exitosamente');
     }
 
     public function show(Proveedores $proveedores)

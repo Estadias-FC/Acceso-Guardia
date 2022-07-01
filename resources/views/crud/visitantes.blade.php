@@ -10,6 +10,21 @@ date_default_timezone_set('America/Monterrey');
 $hora_actual=date("H:i:s");
 ?>
 
+@if ($message = Session::get('success'))
+<div class="alert alert-success alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p>{{ $message }}</p>
+</div>
+@endif
+
+@if ($message = Session::get('success'))
+<div class="alert alert-warning alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p>{{ $message }}</p>
+</div>
+@endif
+
+
 <form action="{{url('visitantes')}}" method="post" enctype="multipart/form-data">
 @csrf
 <h1 class="text-center">Registro de Visitantes</h1>
@@ -77,7 +92,7 @@ Fecha inicio
   <input type="date"  id="fin" onchange="myFunction()">
   <br>
  
-  <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por nombres..">
+  <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por NumEmp...">
   <br>
   <br>
         <a onclick="ExportToExcel('xlsx')"  class="btn btn-success">Exportar a Excel</a>
@@ -134,9 +149,9 @@ Fecha inicio
                   table = document.getElementById("cd");
                   tr = table.getElementsByTagName("tr");
                 
-                  // Loop through all table rows, and hide those who don't match the search query
+                  
                   for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[1];
+                    td = tr[i].getElementsByTagName("td")[0];
                     if (td) {
                       txtValue = td.textContent || td.innerText;
                       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -148,6 +163,7 @@ Fecha inicio
                   }
                 }
                 </script>
+
             <script>
                 function verify(){
                     if(document.getElementById("inicio").value=='' || document.getElementById("fin").value==''){
@@ -158,7 +174,7 @@ Fecha inicio
                 
                 function myFunction() {
                     if(!verify())return;
-                  // Declare variables
+                  
                   var inicio, fin, filter, table, tr, td, i, txtValue;
                   inicio = document.getElementById("inicio");
                   fin = document.getElementById("fin");
@@ -168,7 +184,7 @@ Fecha inicio
                   tr = table.getElementsByTagName("tr");
                  
                 
-                  // Loop through all table rows, and hide those who don't match the search query
+                  
                   for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[4];
                     if (td) {

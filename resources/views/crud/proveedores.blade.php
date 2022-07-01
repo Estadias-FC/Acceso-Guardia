@@ -10,6 +10,12 @@ date_default_timezone_set('America/Monterrey');
 $hora_actual=date("H:i:s");
 ?>
 
+@if ($message = Session::get('success'))
+<div class="alert alert-success alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p>{{ $message }}</p>
+</div>
+@endif
 
 <form action="{{url('proveedores')}}" method="post" enctype="multipart/form-data">
 @csrf
@@ -17,7 +23,7 @@ $hora_actual=date("H:i:s");
 
 <div class="form-group">
 <label for="NoEmp">Número de empleado</label>
-<input type="int" class="form-control" name="NoEmp">
+<input type="number" class="form-control" name="NoEmp">
 </div>
 
 <div class="form-group">
@@ -60,6 +66,7 @@ $hora_actual=date("H:i:s");
 </form>
 
 
+
    
 
 <div class="card">
@@ -67,6 +74,12 @@ $hora_actual=date("H:i:s");
     <div class="card-body">
       <h5 class="card-title">Listado de personas en el sistema</h5>
       <p class="card-text">
+        @if ($message = Session::get('success'))
+<div class="alert alert-warning alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p>{{ $message }}</p>
+</div>
+@endif
 Fecha inicio
   <input type="date"  id="inicio" onchange="myFunction()">
   Fecha fin
@@ -122,16 +135,16 @@ Fecha inicio
             
             <script>
               function myFunction1() {
-                // Declare variables
+                
                 var input, filter, table, tr, td, i, txtValue;
                 input = document.getElementById("myInput");
                 filter = input.value.toUpperCase();
                 table = document.getElementById("cd");
                 tr = table.getElementsByTagName("tr");
               
-                // Loop through all table rows, and hide those who don't match the search query
+                
                 for (i = 0; i < tr.length; i++) {
-                  td = tr[i].getElementsByTagName("td")[3];
+                  td = tr[i].getElementsByTagName("td")[0];
                   if (td) {
                     txtValue = td.textContent || td.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -153,7 +166,7 @@ Fecha inicio
                 
                 function myFunction() {
                     if(!verify())return;
-                  // Declare variables
+                  
                   var inicio, fin, filter, table, tr, td, i, txtValue;
                   inicio = document.getElementById("inicio");
                   fin = document.getElementById("fin");
@@ -163,7 +176,7 @@ Fecha inicio
                   tr = table.getElementsByTagName("tr");
                  
                 
-                  // Loop through all table rows, and hide those who don't match the search query
+                  
                   for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[1];
                     if (td) {
