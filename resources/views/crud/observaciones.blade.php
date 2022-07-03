@@ -12,14 +12,16 @@ $hora_actual=date("H:i:s");
 @csrf
 <h1 class="text-center">Registro de Observaciones</h1>
 
-<div class="form-group">
+<div class="row g-3">
+<div class="col">
+<label for="Fecha de entrada">Fecha</label>
+<input type="date" class="form-control" name="Fecha" value="<?= $fecha_actual?>">
+</div>
+
+<div class="col">
 <label for="Fecha de entrada">Número de empleado</label>
 <input type="text" class="form-control" name="numempleado">
 </div>
-
-<div class="form-group">
-<label for="Fecha de entrada">Fecha</label>
-<input type="date" class="form-control" name="Fecha" value="<?= $fecha_actual?>">
 </div>
 
 <div class="form-group">
@@ -34,6 +36,20 @@ $hora_actual=date("H:i:s");
 
 
 <div class="col-auto p-5 text-center">
-<input class ="btn btn-success" type="submit" center value="Guardar">
-<a class ="btn btn-primary" href="accso"> Volver <a/>
+<input class ="btn btn-success btn-lg" type="submit" center value="Guardar">
+<a class ="btn btn-primary btn-lg" href="acceso"> Volver <a/>
 </div>
+
+
+<!----------------------------CSS--------------------->
+<style>
+  form{
+    margin: 0 auto;
+    width: 900px;
+    border: 5px #c58845 solid;
+    border-radius: 5px;
+    padding: 15px;
+    
+  }
+
+  </style>

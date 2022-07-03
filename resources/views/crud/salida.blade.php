@@ -17,14 +17,16 @@ $hora_actual=date("H:i:s");
 <input type="number" class="form-control" name="Noemp" required>
 </div>
 
-<div class="form-group">
+<div class="row g-3">
+<div class="col">
 <label for="Fecha de entrada">Fecha de Salida</label>
 <input type="date" class="form-control" name="f_salida" value="<?= $fecha_actual?>">
 </div>
 
-<div class="form-group">
+<div class="col">
 <label for="Hora de salida">Hora de Salida</label>
 <input type="time" class="form-control" name="h_salida" value="<?= $hora_actual?>">
+</div>
 </div>
 
 <div class="col-auto p-5 text-center ">
@@ -73,7 +75,20 @@ $hora_actual=date("H:i:s");
 </select>
 
 <div class="col-auto p-5 text-center">
-<input class ="btn btn-success" type="submit" center value="Guardar">
-<a class ="btn btn-primary" href="acceso"> Volver <a/>
+<input class ="btn btn-success btn-lg" type="submit" center value="Guardar">
+<a class ="btn btn-primary btn-lg" href="acceso"> Volver <a/>
 </div>
 
+
+ <!----------------------------CSS--------------------->
+ <style>
+  form{
+    margin: 0 auto;
+    width: 900px;
+    border: 5px #c58845 solid;
+    border-radius: 5px;
+    padding: 15px;
+    
+  }
+
+  </style>

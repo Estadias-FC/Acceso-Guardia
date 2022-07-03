@@ -14,15 +14,16 @@ $hora_actual=date("H:i:s");
 <h1 class="text-center">Actualizar Proveedor</h1>
 
 
-<div class="form-group">
+<div class="row g-3">
+<div class="col">
 <label for="Fecha">Fecha</label>
 <input type="date" class="form-control" name="fecha" value="{{$datosProveedores->Fecha}}">
 </div>
 
-<div class="form-group">
+<div class="col">
 <label for="Empresa">Nombre Comercial</label>
 <input type="text" class="form-control" name="Empresa" value="{{$datosProveedores->Empresa}}">
-</div>
+</div></div>
 
 <div class="form-group">
 <label for="NombreProveedor">Nombre de empleado del proveedor</label>
@@ -34,19 +35,33 @@ $hora_actual=date("H:i:s");
 <input type="text" class="form-control" name="Asunto" value="{{$datosProveedores->Asunto}}">
 </div>
 
-<div class="form-group">
+<div class="row g-3">
+<div class="col">
 <label for="h_entrada">Hora de entrada</label>
 <input type="time" class="form-control" name="h_entrada" value="{{$datosProveedores->h_entrada}}">
 </div>
 
-<div class="form-group">
+<div class="col">
 <label for="h_salida">Hora de salida</label>
 <input type="time" class="form-control" name="h_salida" value="{{$datosProveedores->h_salida}}">
-</div>
+</div></div>
 
 
 
 <div class="col-auto p-5 text-center">
-<input class ="btn btn-success" type="submit" center value="Actualizar">
-<a class ="btn btn-primary" href="/proveedores"> Volver <a/>
+<input class ="btn btn-success btn-lg" type="submit" center value="Actualizar">
+<a class ="btn btn-primary btn-lg" href="/proveedores"> Volver <a/>
 </div>
+
+
+
+<!----------------------------CSS--------------------->
+<style>
+  form{
+    margin: 0 auto;
+    width: 900px;
+    border: 5px #c58845 solid;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  </style>

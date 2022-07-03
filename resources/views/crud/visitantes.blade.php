@@ -17,26 +17,22 @@ $hora_actual=date("H:i:s");
 </div>
 @endif
 
-@if ($message = Session::get('success'))
-<div class="alert alert-warning alert-dismissible">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <p>{{ $message }}</p>
-</div>
-@endif
 
-
+<!----------------FORMULARIO--------------->
 <form action="{{url('visitantes')}}" method="post" enctype="multipart/form-data">
 @csrf
 <h1 class="text-center">Registro de Visitantes</h1>
 
-<div class="form-group">
+<div class="row g-3">
+<div class="col">
+<label for="Fecha">Fecha</label>
+<input type="date" class="form-control" name="Fecha" value="<?= $fecha_actual?>">
+</div>
+
+<div class="col">
 <label for="NoEmp">Número de empleado</label>
 <input type="int" class="form-control" name="NoEmp">
 </div>
-
-<div class="form-group">
-<label for="Fecha">Fecha</label>
-<input type="date" class="form-control" name="Fecha" value="<?= $fecha_actual?>">
 </div>
 
 <div class="form-group">
@@ -44,14 +40,16 @@ $hora_actual=date("H:i:s");
 <input type="text" class="form-control" name="Nombre">
 </div>
 
-<div class="form-group">
+<div class="row g-3">
+<div class="col">
 <label for="ApellidoPaterno">Apellido Paterno</label>
 <input type="text" class="form-control" name="ApellidoPaterno">
 </div>
 
-<div class="form-group">
+<div class="col">
 <label for="ApellidoMaterno">Apellido Materno</label>
 <input type="text" class="form-control" name="ApellidoMaterno">
+</div>
 </div>
 
 <div class="form-group">
@@ -64,38 +62,52 @@ $hora_actual=date("H:i:s");
 <input type="text" class="form-control" name="Identificacion">
 </div>
 
-<div class="form-group">
+<div class="row g-3">
+<div class="col">
 <label for="h_entrada">Hora de entrada</label>
 <input type="time" class="form-control" name="h_entrada" value="<?= $hora_actual?>">
 </div>
 
-<div class="form-group">
+<div class="col">
 <label for="h_salida">Hora de salida</label>
 <input type="time" class="form-control" name="h_salida">
 </div>
+</div>
 
 <div class="col-auto p-5 text-center">
-<input class ="btn btn-success" type="submit" center value="Guardar">
-<a class ="btn btn-primary" href="accso"> Volver </a>
+<input class ="btn btn-success btn-lg" type="submit" center value="Guardar">
+<a class ="btn btn-primary btn-lg" href="acceso"> Volver </a>
 </div>
 </form>
 
+<br><br>
 
+<!---------------TABLA DEL LISTADO DE VISITANTES EN EL SISTEMA-------->
 <div class="card">
     <h5 class="card-header"></h5>
     <div class="card-body">
-      <h5 class="card-title">Listado de personas en el sistema</h5>
+      <h1 class="text-center">Listado de visitantes en el sistema</h1>
       <p class="card-text">
+      @if ($message = Session::get('success'))
+<div class="alert alert-warning alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p>{{ $message }}</p>
+</div>
+@endif
+
+<div class="row g-3">
+<div class="col">
 Fecha inicio
   <input type="date"  id="inicio" onchange="myFunction()">
+</div>
+<div class="col">
   Fecha fin
   <input type="date"  id="fin" onchange="myFunction()">
-  <br>
- 
-  <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por NumEmp...">
-  <br>
-  <br>
-        <a onclick="ExportToExcel('xlsx')"  class="btn btn-success">Exportar a Excel</a>
+  </div>
+  <div class="col">
+   <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por NumEmp..">
+</div>
+        <a onclick="ExportToExcel('xlsx')"  class="btn btn-success btn-sm">Exportar</a>
 <script>
         function ExportToExcel(type, fn, dl) {
     var elt = document.getElementById('cd');
@@ -105,8 +117,15 @@ Fecha inicio
       XLSX.writeFile(wb, fn || ('Visitantes.' + (type || 'xlsx')));
 }
 </script>
-        <div class="table table-responsive">
-            <table class="table table-sm table-bordered" id="cd">
+</div></div>
+
+<div style="background-color:#c58845" class="alert alert-primary d-flex" role="alert">
+                <div>
+                    <h2></h2>
+                </div>
+            </div>
+        <div class="table table-wrapper-scroll-x my-custom-scrollbar">
+            <table class="table table-striped table-hover table-bordered" id="cd">
                 <thead>
                     <th>NumEmp</th>
                     <th>Nombre</th>
@@ -117,10 +136,12 @@ Fecha inicio
                     <th>Identificación (CIC)</th>
                     <th>Hora de entrada</th>
                     <th>Hora de salida</th>
+                    <th></th>
 
                 </thead>
                 <tbody>
                 @foreach ($datosVisitantes as $item)
+                <tr>
                         <td>{{$item->NoEmp}}</td>
                         <td>{{$item->Nombre}} </td>
                         <td>{{$item->ApellidoPaterno}} </td>
@@ -131,9 +152,9 @@ Fecha inicio
                         <td>{{$item->h_entrada}}</td>
                         <td>{{$item->h_salida}}</td>
                         <td>
-                            <form action="{{ route ("crud.actualizar_visitante", $item->id )}}" method="GET">
+                            <!--form action="{{ route ("crud.actualizar_visitante", $item->id )}}" method="GET"-->
                                 <a  class="btn btn-warning btn-sm" href="{{route ('crud.actualizar_visitante',$item->id)}}"><span class="fa-solid fa-user-pen"></span></a>
-                            </form>
+                            </!--form>
                         </td>
 
                     </tr>
@@ -212,4 +233,28 @@ Fecha inicio
     </div>
   </div>
 
+
+  <!----------------------------CSS--------------------->
+<style>
+  form{
+    margin: 0 auto;
+    width: 960px;
+    border: 5px #c58845 solid;
+    border-radius: 5px;
+    padding: 15px;
+    
+  }
+
+  .card{
+    margin: 0 auto;
+    width: 960px;
+    text-align:center;
+    border: 5px #c58845 solid;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+
+  
+</style>
 
