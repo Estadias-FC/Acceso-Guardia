@@ -37,7 +37,7 @@ class EntradaController extends Controller
     {
         $datosEntrada =request()->except('_token');
         Entrada::insert($datosEntrada);
-        return redirect('home')->with('mensaje','Registrado exitosamente');
+        return redirect('entrada')->with('mensaje','Registrado exitosamente');
     }
 
     /**

@@ -17,47 +17,47 @@ $hora_actual=date("H:i:s");
 <div class="row g-3">
 <div class="col">
 <label for="Empresa">Fecha</label>
-<input type="date" class="form-control" name="Fecha" value="{{$datosVisitantes->Fecha}}">
+<input type="date" class="form-control" name="Fecha" value="{{$datosVisitantes->Fecha}}"required>
 </div>
 
 
 <div class="col">
 <label for="Empresa">Nombre del visitante</label>
-<input type="text" class="form-control" name="Nombre" value="{{$datosVisitantes->Nombre}}">
+<input type="text" class="form-control" name="Nombre" value="{{$datosVisitantes->Nombre}}"required>
 </div>
 </div>
 
 <div class="row g-3">
 <div class="col">
 <label for="NombreProveedor">Apellido Paterno</label>
-<input type="text" class="form-control" name="ApellidoPaterno" value="{{$datosVisitantes->ApellidoPaterno}}">
+<input type="text" class="form-control" name="ApellidoPaterno" value="{{$datosVisitantes->ApellidoPaterno}}"required>
 </div>
 
 <div class="col">
 <label for="Asunto">Apellido Materno</label>
-<input type="text" class="form-control" name="ApellidoMaterno" value="{{$datosVisitantes->ApellidoMaterno}}">
+<input type="text" class="form-control" name="ApellidoMaterno" value="{{$datosVisitantes->ApellidoMaterno}}"required>
 </div>
 </div>
 
 <div class="form-group">
 <label for="h_entrada">Asunto</label>
-<input type="text" class="form-control" name="Asunto" value="{{$datosVisitantes->Asunto}}">
+<input type="text" class="form-control" name="Asunto" value="{{$datosVisitantes->Asunto}}"required>
 </div>
 
 <div class="form-group">
 <label for="h_salida">Identidicacion</label>
-<input type="text" class="form-control" name="Identificacion" value="{{$datosVisitantes->Identificacion}}">
+<input type="text" class="form-control" name="Identificacion" value="{{$datosVisitantes->Identificacion}}"required>
 </div>
 
 <div class="row g-3">
 <div class="col">
     <label for="h_salida">Hora de entrada</label>
-    <input type="time" class="form-control" name="h_entrada" value="{{$datosVisitantes->h_entrada}}">
+    <input type="time" class="form-control" name="h_entrada" value="{{$datosVisitantes->h_entrada}}"required>
     </div>
 
     <div class="col">
     <label for="h_salida">Hora de salida</label>
-    <input type="time" class="form-control" name="h_salida" value="{{$datosVisitantes->h_salida}}">
+    <input type="time" class="form-control" name="h_salida" value="{{$datosVisitantes->h_salida}}"required>
     </div>
     </div>
 
@@ -74,6 +74,6 @@ $hora_actual=date("H:i:s");
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
-    
+
   }
 </style>

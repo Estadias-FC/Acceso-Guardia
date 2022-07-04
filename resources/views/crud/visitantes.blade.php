@@ -26,51 +26,51 @@ $hora_actual=date("H:i:s");
 <div class="row g-3">
 <div class="col">
 <label for="Fecha">Fecha</label>
-<input type="date" class="form-control" name="Fecha" value="<?= $fecha_actual?>">
+<input type="date" class="form-control" name="Fecha" value="<?= $fecha_actual?>"required>
 </div>
 
 <div class="col">
 <label for="NoEmp">Número de empleado</label>
-<input type="int" class="form-control" name="NoEmp">
+<input type="int" class="form-control" name="NoEmp"required>
 </div>
 </div>
 
 <div class="form-group">
 <label for="Nombre">Nombre</label>
-<input type="text" class="form-control" name="Nombre">
+<input type="text" class="form-control" name="Nombre"required>
 </div>
 
 <div class="row g-3">
 <div class="col">
 <label for="ApellidoPaterno">Apellido Paterno</label>
-<input type="text" class="form-control" name="ApellidoPaterno">
+<input type="text" class="form-control" name="ApellidoPaterno"required>
 </div>
 
 <div class="col">
 <label for="ApellidoMaterno">Apellido Materno</label>
-<input type="text" class="form-control" name="ApellidoMaterno">
+<input type="text" class="form-control" name="ApellidoMaterno"required>
 </div>
 </div>
 
 <div class="form-group">
 <label for="Asunto">Asunto</label>
-<input type="text" class="form-control" name="Asunto">
+<input type="text" class="form-control" name="Asunto"required>
 </div>
 
 <div class="form-group">
 <label for="Identificacion">Identificación Oficial (CIC)</label>
-<input type="text" class="form-control" name="Identificacion">
+<input type="text" class="form-control" name="Identificacion"required>
 </div>
 
 <div class="row g-3">
 <div class="col">
 <label for="h_entrada">Hora de entrada</label>
-<input type="time" class="form-control" name="h_entrada" value="<?= $hora_actual?>">
+<input type="time" class="form-control" name="h_entrada" value="<?= $hora_actual?>"required>
 </div>
 
 <div class="col">
 <label for="h_salida">Hora de salida</label>
-<input type="time" class="form-control" name="h_salida">
+<input type="time" class="form-control" name="h_salida"required>
 </div>
 </div>
 
@@ -163,14 +163,14 @@ Fecha inicio
             </table>
             <script>
                 function myFunction1() {
-                  
+
                   var input, filter, table, tr, td, i, txtValue;
                   input = document.getElementById("myInput");
                   filter = input.value.toUpperCase();
                   table = document.getElementById("cd");
                   tr = table.getElementsByTagName("tr");
-                
-                  
+
+
                   for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[0];
                     if (td) {
@@ -192,10 +192,10 @@ Fecha inicio
                     }
                     return true;
                 }
-                
+
                 function myFunction() {
                     if(!verify())return;
-                  
+
                   var inicio, fin, filter, table, tr, td, i, txtValue;
                   inicio = document.getElementById("inicio");
                   fin = document.getElementById("fin");
@@ -203,14 +203,14 @@ Fecha inicio
                   fin = fin.value.toUpperCase();
                   table = document.getElementById("example");
                   tr = table.getElementsByTagName("tr");
-                 
-                
-                  
+
+
+
                   for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[4];
                     if (td) {
                       txtValue = td.textContent || td.innerText;
-                
+
                       if (txtValue.slice(1,4) >= inicio.slice(1,4) && txtValue.slice(1,4) <= fin.slice(1,4)) {
                         if(txtValue.slice(5,7) >= inicio.slice(5,7) && txtValue.slice(5,7) <= fin.slice(5,7)){
                             if(txtValue.slice(8,10) >= inicio.slice(8,10) && txtValue.slice(8,10) <= fin.slice(8,10)){
@@ -223,7 +223,7 @@ Fecha inicio
                       }
                       } else {
                         tr[i].style.display = "none";
-                      } 
+                      }
                     }
                   }
                 }
@@ -242,7 +242,7 @@ Fecha inicio
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
-    
+
   }
 
   .card{
@@ -253,8 +253,8 @@ Fecha inicio
     border-radius: 5px;
     padding: 15px;
   }
-  
 
-  
+
+
 </style>
 

@@ -27,38 +27,38 @@ $hora_actual=date("H:i:s");
 <div class="row g-3">
 <div class="col">
 <label for="Fecha">Fecha</label>
-<input type="date" class="form-control" name="fecha" value="<?= $fecha_actual?>">
+<input type="date" class="form-control" name="fecha" value="<?= $fecha_actual?>"required>
 </div>
 
 <div class="col">
 <label for="NoEmp">Número de empleado</label>
-<input type="number" class="form-control" name="NoEmp">
+<input type="number" class="form-control" name="NoEmp"required>
 </div> </div>
 
 <div class="form-group">
 <label for="Empresa">Nombre Comercial</label>
-<input type="text" class="form-control" name="Empresa">
+<input type="text" class="form-control" name="Empresa"required>
 </div>
 
 <div class="form-group">
 <label for="NombreProveedor">Nombre de empleado del proveedor</label>
-<input type="text" class="form-control" name="NombreProveedor">
+<input type="text" class="form-control" name="NombreProveedor"required>
 </div>
 
 <div class="form-group">
 <label for="Asunto">Asunto</label>
-<input type="text" class="form-control" name="Asunto">
+<input type="text" class="form-control" name="Asunto"required>
 </div>
 
 <div class="row g-3">
 <div class="col">
 <label for="h_entrada">Hora de entrada</label>
-<input type="time" class="form-control" name="h_entrada" value="<?= $hora_actual?>">
+<input type="time" class="form-control" name="h_entrada" value="<?= $hora_actual?>"required>
 </div>
 
 <div class="col">
 <label for="h_salida">Hora de salida</label>
-<input type="time" class="form-control" name="h_salida">
+<input type="time" class="form-control" name="h_salida"required>
 </div></div>
 
 
@@ -70,7 +70,7 @@ $hora_actual=date("H:i:s");
 
 
 <br><br>
-   
+
 <!---------------TABLA DEL LISTADO DE PROVEEDORES EN EL SISTEMA-------->
 <div class="card">
     <h5 class="card-header"></h5>
@@ -138,7 +138,7 @@ Fecha inicio
                         <td>{{$item->h_salida}} </td>
                         <td>
 
-                            
+
                             <a class="btn btn-warning btn-sm" href="{{route ('proveedores.edit',$item->id)}}"><span class="fa-solid fa-user-pen"></span></a>
                         </td>
 
@@ -146,17 +146,17 @@ Fecha inicio
                 @endforeach
                 </tbody>
             </table>
-            
+
             <script>
               function myFunction1() {
-                
+
                 var input, filter, table, tr, td, i, txtValue;
                 input = document.getElementById("myInput");
                 filter = input.value.toUpperCase();
                 table = document.getElementById("cd");
                 tr = table.getElementsByTagName("tr");
-              
-                
+
+
                 for (i = 0; i < tr.length; i++) {
                   td = tr[i].getElementsByTagName("td")[0];
                   if (td) {
@@ -177,10 +177,10 @@ Fecha inicio
                     }
                     return true;
                 }
-                
+
                 function myFunction() {
                     if(!verify())return;
-                  
+
                   var inicio, fin, filter, table, tr, td, i, txtValue;
                   inicio = document.getElementById("inicio");
                   fin = document.getElementById("fin");
@@ -188,14 +188,14 @@ Fecha inicio
                   fin = fin.value.toUpperCase();
                   table = document.getElementById("example");
                   tr = table.getElementsByTagName("tr");
-                 
-                
-                  
+
+
+
                   for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[1];
                     if (td) {
                       txtValue = td.textContent || td.innerText;
-                
+
                       if (txtValue.slice(1,4) >= inicio.slice(1,4) && txtValue.slice(1,4) <= fin.slice(1,4)) {
                         if(txtValue.slice(5,7) >= inicio.slice(5,7) && txtValue.slice(5,7) <= fin.slice(5,7)){
                             if(txtValue.slice(8,10) >= inicio.slice(8,10) && txtValue.slice(8,10) <= fin.slice(8,10)){
@@ -208,7 +208,7 @@ Fecha inicio
                       }
                       } else {
                         tr[i].style.display = "none";
-                      } 
+                      }
                     }
                   }
                 }
@@ -217,7 +217,7 @@ Fecha inicio
       </p>
     </div>
   </div>
- 
+
 
 <!----------------------------CSS--------------------->
 <style>
@@ -227,7 +227,7 @@ Fecha inicio
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
-    
+
   }
 
   .card{
@@ -239,9 +239,9 @@ Fecha inicio
     padding: 15px;
   }
 
-  
-</style>
-    
 
-    
-  
+</style>
+
+
+
+

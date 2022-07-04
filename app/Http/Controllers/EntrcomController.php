@@ -37,7 +37,7 @@ class EntrcomController extends Controller
     {
         $datosEntradaCom =request()->except('_token');
         entrcom::insert($datosEntradaCom);
-        return redirect('home')->with('mensaje','Registrado exitosamente');
+        return redirect('entrcom')->with('mensaje','Registrado exitosamente');
     }
 
     /**

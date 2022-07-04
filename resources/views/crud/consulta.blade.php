@@ -12,13 +12,13 @@ $fecha_actual=date("Y-m-d");
         <form action="{{url('consulta')}}" method="get">
             <div class="form-row">
                 <div class="col">
-                    <input type="text" class="form-control" name="texto" placeholder="N&uacute;mero de Empleado">
+                    <input type="text" class="form-control" name="texto" placeholder="N&uacute;mero de Empleado"required>
                 </div>
                 <div class="col">
-                    <input type="submit" class="btn btn-primary btn-lg" value="Buscar">                
+                    <input type="submit" class="btn btn-primary btn-lg" value="Buscar">
                     <input type="submit" class="btn btn-success btn-lg" value="Mostrar todo"  href="consulta">
                 </div>
-                
+
             </div>
         </form>
     </div>
@@ -30,7 +30,7 @@ $fecha_actual=date("Y-m-d");
                 </div>
             </div>
     <div class="table table-wrapper-scroll-x my-custom-scrollbar">
-        <table class="table table table-striped table-hover table-bordered"> 
+        <table class="table table table-striped table-hover table-bordered">
             <thead>
                 <tr>
                     <th>Número de empleado</th>
@@ -68,7 +68,7 @@ $fecha_actual=date("Y-m-d");
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
-    
+
   }
 
   .card{

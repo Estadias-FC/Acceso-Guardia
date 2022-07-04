@@ -20,7 +20,7 @@ $hora_actual=date("H:i:s");
 
 <div class="col">
 <label for="Fecha de entrada">Número de empleado</label>
-<input type="text" class="form-control" name="numempleado">
+<input type="text" class="form-control" name="numempleado" required>
 </div>
 </div>
 
@@ -31,7 +31,7 @@ $hora_actual=date("H:i:s");
 
 <div class="form-group">
 <label for="Fecha de entrada">Observaciones</label>
-<input type="text" class="form-control" name="comentarios">
+<input type="text" class="form-control" name="comentarios" required>
 </div>
 
 
@@ -49,7 +49,7 @@ $hora_actual=date("H:i:s");
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
-    
+
   }
 
   </style>

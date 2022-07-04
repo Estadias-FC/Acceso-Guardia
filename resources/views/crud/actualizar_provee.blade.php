@@ -17,33 +17,33 @@ $hora_actual=date("H:i:s");
 <div class="row g-3">
 <div class="col">
 <label for="Fecha">Fecha</label>
-<input type="date" class="form-control" name="fecha" value="{{$datosProveedores->Fecha}}">
+<input type="date" class="form-control" name="fecha" value="{{$datosProveedores->Fecha}}"required>
 </div>
 
 <div class="col">
 <label for="Empresa">Nombre Comercial</label>
-<input type="text" class="form-control" name="Empresa" value="{{$datosProveedores->Empresa}}">
+<input type="text" class="form-control" name="Empresa" value="{{$datosProveedores->Empresa}}"required>
 </div></div>
 
 <div class="form-group">
 <label for="NombreProveedor">Nombre de empleado del proveedor</label>
-<input type="text" class="form-control" name="NombreProveedor" value="{{$datosProveedores->NombreProveedor}}">
+<input type="text" class="form-control" name="NombreProveedor" value="{{$datosProveedores->NombreProveedor}}"required>
 </div>
 
 <div class="form-group">
 <label for="Asunto">Asunto</label>
-<input type="text" class="form-control" name="Asunto" value="{{$datosProveedores->Asunto}}">
+<input type="text" class="form-control" name="Asunto" value="{{$datosProveedores->Asunto}}"required>
 </div>
 
 <div class="row g-3">
 <div class="col">
 <label for="h_entrada">Hora de entrada</label>
-<input type="time" class="form-control" name="h_entrada" value="{{$datosProveedores->h_entrada}}">
+<input type="time" class="form-control" name="h_entrada" value="{{$datosProveedores->h_entrada}}"required>
 </div>
 
 <div class="col">
 <label for="h_salida">Hora de salida</label>
-<input type="time" class="form-control" name="h_salida" value="{{$datosProveedores->h_salida}}">
+<input type="time" class="form-control" name="h_salida" value="{{$datosProveedores->h_salida}}"required>
 </div></div>
 
 
