@@ -1,15 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container text-center">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Iniciar sesión') }}</div>
+<link href="{{ asset('css/header.css') }}" rel="stylesheet">
 
+
+        <div class="panel-heading div_title">
+            <div class="row">
+                <div class="col-2 col-sm-2 col-md-1 d-flex align-items-center">
+                    <img src="{{asset('images/2.jpeg')}}" class="img_fc_logo" alt="fc_logo">
+                        
+                </div>
+                <div class="col-8 col-sm-8 col-md-10 d-flex align-items-center">
+                    <h4 class="luz" id="blink">INSTITUCION POLICIAL ESTATAL FUERZA CIVIL</h4>
+                </div>
+                <div class="col-2 col-sm-2 col-md-1 d-flex align-items-center">
+                    <img src="{{asset('images/3.jpg')}}" class="img_fc_logo" alt="rino">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card container text-center">
                 <div class="card-body">
+
+                <img src="{{asset('images/fc_logoo1.jpg')}}" class="img_fc_login" alt="login">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
+                        <div class="card-header text-center">{{ __('Iniciar Sesión') }}</div><br><br>
 
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo') }}</label>

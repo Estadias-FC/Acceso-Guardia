@@ -8,6 +8,13 @@ date_default_timezone_set('America/Monterrey');
 $hora_actual=date("H:i:s");
 ?>
 
+@if ($message = Session::get('success'))
+<div class="alert alert-success alert-dismissible justify-content-center">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p>{{ $message }}</p>
+</div>
+@endif
+
 <form action="{{url('salida')}}" method="post" enctype="multipart/form-data">
 @csrf
 <h1 class="text-center">Registro de Salida</h1>
@@ -30,7 +37,7 @@ $hora_actual=date("H:i:s");
 </div>
 
 <div class="col-auto p-5 text-center ">
-<select class="form-select" name="adscripcion">
+<select class="form-select" name="adscripcion" required>
   <option selected>Adscripcion</option>
   <option value="COMISARÍA Y AYUDANTÍA">COMISARÍA Y AYUDANTÍA</option>
   <option value="JEFATURA DE ESTADO MAYOR">JEFATURA DE ESTADO MAYOR</option>

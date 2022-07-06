@@ -8,6 +8,13 @@ date_default_timezone_set('America/Monterrey');
 $hora_actual=date("H:i:s");
 ?>
 
+@if ($message = Session::get('success'))
+<div class="alert alert-success alert-dismissible justify-content-center">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p>{{ $message }}</p>
+</div>
+@endif
+
 <form action="{{url('entrada')}}" method="post" enctype="multipart/form-data">
 @csrf
 <h1 class="text-center">Registro de entrada</h1>

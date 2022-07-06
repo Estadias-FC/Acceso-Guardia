@@ -238,7 +238,7 @@ Fecha inicio
 <style>
   form{
     margin: 0 auto;
-    width: 960px;
+    width: 1000px;
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
@@ -247,7 +247,7 @@ Fecha inicio
 
   .card{
     margin: 0 auto;
-    width: 960px;
+    width: 1000px;
     text-align:center;
     border: 5px #c58845 solid;
     border-radius: 5px;

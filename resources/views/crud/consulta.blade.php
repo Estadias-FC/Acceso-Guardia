@@ -23,7 +23,7 @@ $fecha_actual=date("Y-m-d");
         </form>
     </div>
 
-    <div class="card">
+    <div class="card1">
     <div style="background-color:#c58845" class="alert alert-primary d-flex" role="alert">
                 <div>
                     <h2></h2>
@@ -71,7 +71,7 @@ $fecha_actual=date("Y-m-d");
 
   }
 
-  .card{
+  .card1{
     margin: 0 auto;
     width: 900px;
     text-align:center;

@@ -37,7 +37,7 @@ class SalidaController extends Controller
     {
         $datosSalida =request()->except('_token');
         Salida::insert($datosSalida);
-        return redirect('salida')->with('mensaje','Registrado exitosamente');
+        return redirect('salida')->with('success','Registrado exitosamente');
     }
 
     /**

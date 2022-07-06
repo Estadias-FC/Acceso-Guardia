@@ -38,7 +38,7 @@ class ObservacionesController extends Controller
     {
         $datosObservaciones =request()->except('_token');
         Observaciones::insert($datosObservaciones);
-        return redirect('observaciones')->with('mensaje','Registrado exitosamente');
+        return redirect('observaciones')->with('success','Registrado exitosamente');
     }
 
     /**
