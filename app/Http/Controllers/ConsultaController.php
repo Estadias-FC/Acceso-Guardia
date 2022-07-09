@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AsistenciaModel;
 use App\Models\Consulta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,14 +18,16 @@ class ConsultaController extends Controller
     public function index(Request $request)
     {
 
-        $texto=trim($request->get('texto'));
-        $consultas =DB::table('regasistencia')
-        ->select('regasistencia.*')
-        ->where('Noemp','LIKE','%'.$texto.'%')
-        ->orwhere('f_entrada','LIKE','%'.$texto.'%')
-        ->orderBY('f_entrada','Desc')
-        ->paginate(15);
-        return view ('crud.consulta',compact('consultas','texto'));
+        // $texto=trim($request->get('texto'));
+        // $consultas =DB::table('regasistencia')
+        // ->select('regasistencia.*')
+        // ->where('Noemp','LIKE','%'.$texto.'%')
+        // ->orwhere('f_entrada','LIKE','%'.$texto.'%')
+        // ->orderBY('f_entrada','Desc')
+        // ->paginate(15);
+        // return view ('crud.consulta',compact('consultas','texto'));
+        $consultas = AsistenciaModel::get();
+        return view('crud.consulta',compact('consultas'));
     }
 
     /**

@@ -1,5 +1,6 @@
 @include ('templates.header')
 @include ('templates.menu')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <script src="https://kit.fontawesome.com/4f90b872f3.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
@@ -31,7 +32,7 @@ $hora_actual=date("H:i:s");
 
 <div class="col">
 <label for="NoEmp">Número de empleado</label>
-<input type="int" class="form-control" name="NoEmp"required>
+<input type="number" class="form-control" name="NoEmp"required>
 </div>
 </div>
 
@@ -201,7 +202,7 @@ Fecha inicio
                   fin = document.getElementById("fin");
                   inicio = inicio.value.toUpperCase();
                   fin = fin.value.toUpperCase();
-                  table = document.getElementById("example");
+                  table = document.getElementById("cd");
                   tr = table.getElementsByTagName("tr");
 
 
@@ -228,6 +229,7 @@ Fecha inicio
                   }
                 }
               </script>
+
         </div>
       </p>
     </div>

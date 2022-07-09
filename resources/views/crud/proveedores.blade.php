@@ -186,7 +186,7 @@ Fecha inicio
                   fin = document.getElementById("fin");
                   inicio = inicio.value.toUpperCase();
                   fin = fin.value.toUpperCase();
-                  table = document.getElementById("example");
+                  table = document.getElementById("cd");
                   tr = table.getElementsByTagName("tr");
 
 

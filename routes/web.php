@@ -7,8 +7,11 @@ use App\Http\Controllers\ObservacionesController;
 use App\Http\Controllers\EntrcomController;
 use App\Http\Controllers\ExternoController;
 use App\Http\Controllers\ConsultaController;
+use App\Http\Controllers\ConsultaEmpController;
+use App\Http\Controllers\ConsultaVeController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\VisitantesController;
+use Asm89\Stack\Cors;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,3 +59,7 @@ Route::get('/',[ProveedorController::class, 'index'])->name('Proveedores.index')
 
 Route::get('/edit/{id}',[VisitantesController::class,'edit'])->name('crud.actualizar_visitante');
 Route::put('/update/{id}',[VisitantesController::class,'update'])->name('crud.update_visita');
+
+Route::get('vehiculos', [ConsultaVeController::class,'index'])->name('vehiculos.index')->middleware('auth');
+
+Route::get('Empleados',[ConsultaEmpController::class,'index'])->name('empleados.index')->middleware('auth');
