@@ -10,7 +10,7 @@ $fecha_actual=date("Y-m-d");
 ?>
 
 <div class="consulta">
-    <h1 class="text-center">Consulta de Vehiculos</h1>
+    <h1 class="text-center">Consulta de Asistencia</h1>
     <div class="row g-3">
         <div class="col">
             <form action="{{url('consulta')}}" method="get">

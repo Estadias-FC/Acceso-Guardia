@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a class="dropdown-item" href="{{ route('logout') }}"
+                    <a class="btn btn-danger" href="{{ route('login') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}

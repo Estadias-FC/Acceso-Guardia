@@ -1,3 +1,5 @@
+@extends('layouts.app')
+
 @include ('templates.header')
 @include ('templates.menu')
 

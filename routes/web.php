@@ -14,6 +14,7 @@ use App\Http\Controllers\VisitantesController;
 use Asm89\Stack\Cors;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,7 +55,7 @@ Route::resource('externo', ExternoController::class)->middleware('auth');
 Route::resource('consulta', ConsultaController::class)->middleware('auth');
 Route::resource('proveedores', App\Http\Controllers\ProveedorController::class)->middleware('auth');
 Route::resource('visitantes', App\Http\Controllers\VisitantesController::class)->middleware('auth');
-Route::get('/',[ProveedorController::class, 'index'])->name('Proveedores.index');
+
 
 
 Route::get('/edit/{id}',[VisitantesController::class,'edit'])->name('crud.actualizar_visitante');

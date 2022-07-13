@@ -19,7 +19,7 @@ function switch_title_properties(){
 
 function check_entry() {
     let numero_empleado = $("#numero_empleado").val();
-
+    
     let params = {
         numero_empleado: numero_empleado,
     };

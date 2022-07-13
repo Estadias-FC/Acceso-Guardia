@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Salida;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SalidaController extends Controller
 {
@@ -35,8 +36,13 @@ class SalidaController extends Controller
      */
     public function store(Request $request)
     {
-        $datosSalida =request()->except('_token');
-        Salida::insert($datosSalida);
+        $datosSalida = DB::table('regasistencia')->latest();
+        $datosSalida->update([
+            'f_salida'=>$request->f_salida,
+            'h_salida'=>$request->h_salida
+        ]);
+        
+        
         return redirect('salida')->with('success','Registrado exitosamente');
     }
 

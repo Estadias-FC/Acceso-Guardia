@@ -1,5 +1,8 @@
+@extends('layouts.app')
+
 @include ('templates.header')
 @include ('templates.menu')
+
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <script src="https://kit.fontawesome.com/4f90b872f3.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>

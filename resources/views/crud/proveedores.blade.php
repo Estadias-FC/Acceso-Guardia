@@ -1,5 +1,8 @@
+@extends('layouts.app')
+
 @include ('templates.header')
 @include ('templates.menu')
+
 <script src="https://kit.fontawesome.com/4f90b872f3.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
