@@ -51,10 +51,10 @@
       </ul>
     </div>
   </div>
-  <a  href="{{ route('logout') }}"
+  <a class ="btn btn-danger btn-sm" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Salir') }}
                                     </a>
 </nav>
 </nav>

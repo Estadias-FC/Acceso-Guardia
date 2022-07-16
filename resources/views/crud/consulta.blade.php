@@ -8,7 +8,7 @@
 date_default_timezone_set('America/Monterrey');
 $fecha_actual=date("Y-m-d");
 ?>
-
+ <br>
 <div class="consulta">
     <h1 class="text-center">Consulta de Asistencia</h1>
     <div class="row g-3">
@@ -26,7 +26,7 @@ $fecha_actual=date("Y-m-d");
                 </div> --}}
             </form>
         </div>
-        <div class="col">
+        <div class="col"> Buscar por número de empleado:
             <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por NumEmp..">
          </div>
         <div class="card1">

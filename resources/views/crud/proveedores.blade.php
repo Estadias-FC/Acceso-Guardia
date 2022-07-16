@@ -75,7 +75,7 @@ $hora_actual=date("H:i:s");
 <br><br>
 
 <!---------------TABLA DEL LISTADO DE PROVEEDORES EN EL SISTEMA-------->
-<div class="card">
+<div class="card1">
     <h5 class="card-header"></h5>
     <div class="card-body">
       <h1 class="text-center">Listado de proveedores en el sistema</h1>
@@ -233,7 +233,7 @@ Fecha inicio
 
   }
 
-  .card{
+  .card1{
     margin: 0 auto;
     width: 900px;
     text-align:center;

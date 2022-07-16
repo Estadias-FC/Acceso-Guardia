@@ -26,7 +26,7 @@
                 <img src="{{asset('images/fc_logoo1.jpg')}}" class="img_fc_login" alt="login">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-                        <div class="card-header text-center">{{ __('Iniciar Sesión') }}</div><br><br>
+                        <div class="card-header text-center"> <b>{{ __('Iniciar Sesión') }}</b></div><br><br>
 
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo') }}</label>
@@ -73,7 +73,7 @@
 
                         <div class="row mb-0 text-left">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-success ">
+                                <button type="submit" class="btn btn-success btn-lg">
                                     {{ __('Ingresar') }}
                                 </button>
 
