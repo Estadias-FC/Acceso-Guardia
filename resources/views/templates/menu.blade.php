@@ -51,7 +51,7 @@
       </ul>
     </div>
   </div>
-  <a class ="btn btn-danger btn-sm" href="{{ route('logout') }}"
+  <a class ="btn btn-danger " href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Salir') }}
