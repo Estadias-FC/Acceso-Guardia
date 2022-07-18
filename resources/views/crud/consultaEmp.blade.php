@@ -32,9 +32,9 @@ $fecha_actual=date("Y-m-d");
         </form>
     </div>
 
-    <p>
-        <input class="form-control"type="text" placeholder="Buscar..." id="mySearch">
-      </p>
+    <div class="col">Buscar por numero de empleado:
+        <input type="text" placeholder="Buscar..." id="mySearch">
+    </div>
 
     <div class="card1">
     <div style="background-color:#c58845" class="alert alert-primary d-flex" role="alert">
