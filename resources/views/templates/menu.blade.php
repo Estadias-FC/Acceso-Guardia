@@ -27,10 +27,6 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link"  href="consulta" data-toggle="" data-target="">Consulta</a>
-        </li>
-
-        <li class="nav-item">
           <a class="nav-link"  href="visitantes" data-toggle="" data-target="">Visitantes</a>
         </li>
 
@@ -38,6 +34,10 @@
           <a class="nav-link"  href="proveedores" data-toggle="" data-target="">Proveedores</a>
         </li>
         
+        <li class="nav-item">
+          <a class="nav-link"  href="consulta" data-toggle="" data-target="">Consulta</a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link"  href="vehiculos" data-toggle="" data-target="">Consulta Vehiculos</a>
         </li>
@@ -56,6 +56,9 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Salir') }}
                                     </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                      @csrf
+                                  </form>
 </nav>
 </nav>
 

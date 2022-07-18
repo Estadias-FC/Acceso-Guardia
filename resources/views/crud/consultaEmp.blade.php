@@ -1,5 +1,5 @@
 
-@extends('layouts.app')
+
 
 @include ('templates.header')
 @include ('templates.menu')
@@ -8,7 +8,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-
+<link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
 
 <?php
 date_default_timezone_set('America/Monterrey');
@@ -32,6 +32,10 @@ $fecha_actual=date("Y-m-d");
         </form>
     </div>
 
+    <p>
+        <input class="form-control"type="text" placeholder="Buscar..." id="mySearch">
+      </p>
+
     <div class="card1">
     <div style="background-color:#c58845" class="alert alert-primary d-flex" role="alert">
                 <div>
@@ -42,7 +46,7 @@ $fecha_actual=date("Y-m-d");
 
 <div class="container">
     <div class="table table-wrapper-scroll-x my-custom-scrollbar">
-        <table id="exportable" class="table table table-striped table-hover table-bordered" style="width:100%">
+        <table id="exportable" class="display nowrap mytables1 table-responsive" style="width:100%">
             <thead>
                 
                 <tr>
@@ -81,29 +85,28 @@ $fecha_actual=date("Y-m-d");
 <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
 
 <script>
-    $(document).ready(function () {
-            $('#exportable').DataTable({
-                ordering: false,
-                info: false,
-                scrollY: false,
-                scrollX: true,
-                language: {
+    var tables1 = $('.mytables1').DataTable({
+      "dom": '<"top"i>rt<"bottom">p<"clear">',
+      "pageLength": 5,
+      "bLengthChange": false,
+      language: {
                 url: 'https://cdn.datatables.net/plug-ins/1.12.1/i18n/es-MX.json'
                 },
-                "pageLength": 15,
-                "bLengthChange": false 
-                // dom: 'Bfrtip',
-                // buttons: [
-                // {
-                //     extend:'excelHtml5',
-                //     title:'Exportado de Empleados'
-                // }
-                
-                // ]
-            });
-        });
+        ordering: false,
+        info: false,
+    });
+
+    $('#mySearch').on( 'keyup click', function () {
+        tables1
+        .columns( 0 )
+        .search( this.value )
+        .draw();
+
+    });
 </script>
 
 
