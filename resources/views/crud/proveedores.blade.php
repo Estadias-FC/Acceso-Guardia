@@ -80,12 +80,12 @@ $hora_actual=date("H:i:s");
     <div class="card-body">
       <h1 class="text-center">Listado de proveedores en el sistema</h1>
       <p class="card-text">
-        @if ($message = Session::get('success'))
+        {{-- @if ($message = Session::get('success'))
 <div class="alert alert-warning alert-dismissible">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
     <p>{{ $message }}</p>
 </div>
-@endif
+@endif --}}
 
 <div class="row g-3">
 <div class="col">

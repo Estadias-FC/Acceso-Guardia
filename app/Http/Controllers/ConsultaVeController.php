@@ -11,8 +11,12 @@ class ConsultaVeController extends Controller
    public function index()
    {
 
-        $Vehiculos = VehiculosModel::get();
+      //   $Vehiculos = VehiculosModel::get();
 
-        return view('crud.consultaVehiculos',compact('Vehiculos'));
+      //   return view('crud.consultaVehiculos',compact('Vehiculos'));
+      $datos= DB::table('empleados')
+        ->leftJoin('vehiculos','empleados.NoEmp','=','vehiculos.NoEmp')
+        ->select('empleados.*','vehiculos.*','empleados.NoEmp as NE')->get();
+        return view('crud.consultaVehiculos',['datos'=>$datos]);
    }
 }

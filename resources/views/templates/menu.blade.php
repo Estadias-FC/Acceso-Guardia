@@ -39,12 +39,9 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link"  href="vehiculos" data-toggle="" data-target="">Consulta Vehiculos</a>
+          <a class="nav-link"  href="vehiculos" data-toggle="" data-target="">Consulta General</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link"  href="Empleados" data-toggle="" data-target="">Consulta Empleados</a>
-        </li>
         
           
         </li>
