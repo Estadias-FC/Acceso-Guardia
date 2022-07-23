@@ -1,5 +1,5 @@
 
-@extends('layouts.app')
+
 
 @include ('templates.header')
 @include ('templates.menu')
@@ -36,7 +36,7 @@
         <div class="col-md-4 col_div_img_logo">
             <div style="width: 80% center; ">
                 <img src="{{asset('images/fc_logo.png')}}" id="person_logo" alt="person_logo" class="rounded-circle" alt="Imagen Empleado">
-                
+
             </div>
 
         </div>
@@ -76,7 +76,7 @@
             <div class="separator-small"></div>
 
 
-         
+
         </div>
     </div>
 

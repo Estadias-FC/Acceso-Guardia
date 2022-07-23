@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-2 col-sm-2 col-md-1 d-flex align-items-center">
                     <img src="{{asset('images/2.jpeg')}}" class="img_fc_logo" alt="fc_logo">
-                        
+
                 </div>
                 <div class="col-8 col-sm-8 col-md-10 d-flex align-items-center">
                     <h4 class="luz" id="blink">INSTITUCION POLICIAL ESTATAL FUERZA CIVIL</h4>
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="card container text-center">
                 <div class="card-body">
 
@@ -57,18 +57,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Turno') }}</label>
 
-                            <div class="col-md-6">
-                                <select class="form-select" name="estatus">
-                                <option selected>Turno</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                </select>
-                            </div>
-                        </div>
 
 
                         <div class="row mb-0 text-left">
@@ -77,7 +66,7 @@
                                     {{ __('Ingresar') }}
                                 </button>
 
-                               
+
                             </div>
                         </div>
                     </form>
