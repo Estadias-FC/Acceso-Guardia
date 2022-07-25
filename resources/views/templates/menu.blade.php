@@ -11,7 +11,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav">              
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="acceso" >Acceso</a>
         </li>
@@ -53,7 +53,50 @@
         </li>
       </ul>
     </div>
-  </div>
+  
+  <div id="app">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand">
+                            {{ config('Bienvenido', 'Bienvenido') }}
+                        </a>
+
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <!-- Left Side Of Navbar -->
+
+
+                            <!-- Right Side Of Navbar -->
+                            <ul class="navbar-nav ms-auto">
+                                
+                                <!-- Authentication Links -->
+                                @guest
+                                    @if (Route::has('login'))
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                        </li>
+                                    @endif
+
+                                   <!-- @if (Route::has('register'))
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        </li>
+                                    @endif -->
+                                @else
+                                    <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="btn btn-primary btn-sm disabled" >
+                                            {{ Auth::user()->name }}
+                                        </a>
+
+
+                                    </li>
+                                @endguest
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
   <a class ="btn btn-danger " href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
