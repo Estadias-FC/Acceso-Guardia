@@ -30,7 +30,7 @@
     </div>
 
     <div class="row div_main_data justify-content-center">
-        <div class="col-md-4 col_div_img_logo">
+        <div class="col-md-3 col_div_img_logo">
             <div style="width: 50% center; ">
                 <img src="{{asset('images/fc_logo.png')}}" id="person_logo" alt="person_logo" class="rounded-circle" alt="Imagen Empleado">
 
