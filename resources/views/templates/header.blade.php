@@ -67,12 +67,12 @@
                     <img src="{{asset('images/fc_logo.png')}}" class="img-fluid" width="50px" height="50px" >
                 </marquee>
             </h2>
-            <div id="app">
+            <!--<div id="app">
                 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                     <div class="container">
                         <a class="navbar-brand">
                             {{ config('Bienvenido', 'Bienvenido') }}
-                        </a>
+                        </a>-->
 
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">

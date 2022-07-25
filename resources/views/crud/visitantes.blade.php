@@ -113,6 +113,10 @@ Fecha inicio
    <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por NumEmp..">
 </div>
 
+
+
+
+
         <a onclick="ExportToExcel('xlsx')"  class="btn btn-success btn-sm">Exportar</a>
 
 <script>

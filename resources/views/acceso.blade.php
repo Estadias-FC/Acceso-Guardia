@@ -1,6 +1,3 @@
-
-
-
 @include ('templates.header')
 @include ('templates.menu')
 
@@ -32,9 +29,9 @@
         </div>
     </div>
 
-    <div class="row div_main_data">
-        <div class="col-md-4 col_div_img_logo">
-            <div style="width: 80% center; ">
+    <div class="row div_main_data justify-content-center">
+        <div class="col-md-3 col_div_img_logo">
+            <div style="width: 50% center; ">
                 <img src="{{asset('images/fc_logo.png')}}" id="person_logo" alt="person_logo" class="rounded-circle" alt="Imagen Empleado">
 
             </div>
@@ -42,9 +39,56 @@
         </div>
 
         <!-- Code Reader -->
-        <div class="col-md-8">
+      
+
+    <!--<div class="separator-small"></div>
+
+    <div class="row div_registro">-->
+        <div class="col-md-4">
+            
+            @include('templates.camera')
 
             <div class="separator-small"></div>
+        </div>
+        <div class="separator-small"></div>
+        
+        <div class="row div_registro">
+        <div class="col-md-6">
+
+            <div style="background-color:#c58845" class="alert alert-primary d-flex align-items-center" role="alert">
+                <div>
+                    <h2>Registro</h2>
+                </div>
+            </div>
+            <div class="table-wrapper-scroll-x my-custom-scrollbar">
+                <table class="table table-striped table-hover table-bordered" id="table_registro">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">No.Emp.</th>
+                            <th scope="col">Grado</th>
+                            <th scope="col">Nombre Completo</th>
+                            <th scope="col">Adscripcion</th>
+                            <th scope="col">Estatus</th>
+                            <th scope="col">Hora Entrada</th>
+                            <th scope="col">Fecha Entrada</th>
+                            <th scope="col">Hora Salida</th>
+                            <th scope="col">Fecha Salida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+            </div>
+            <nav class="nav_pagination"> </nav>
+
+            <div class="separator-small"></div>
+        </div>
+
+        <div class="col-md-6">
+           
 
             <div style="background-color:#c58845" class="alert alert-primary d-flex align-items-center" role="alert">
                 <div>
@@ -80,46 +124,8 @@
         </div>
     </div>
 
-    <div class="separator-medium"></div>
 
-    <div class="row div_registro">
-        <div class="col-md-5">
-            @include('templates.camera')
-
-            <div class="separator-small"></div>
-        </div>
-        <div class="col-md-7">
-
-            <div style="background-color:#c58845" class="alert alert-primary d-flex align-items-center" role="alert">
-                <div>
-                    <h2>Registro</h2>
-                </div>
-            </div>
-            <div class="table-wrapper-scroll-x my-custom-scrollbar">
-                <table class="table table-striped table-hover table-bordered" id="table_registro">
-                    <thead>
-                        <tr>
-                            <th scope="col">No.</th>
-                            <th scope="col">No.Emp.</th>
-                            <th scope="col">Grado</th>
-                            <th scope="col">Nombre Completo</th>
-                            <th scope="col">Adscripcion</th>
-                            <th scope="col">Estatus</th>
-                            <th scope="col">Hora Entrada</th>
-                            <th scope="col">Fecha Entrada</th>
-                            <th scope="col">Hora Salida</th>
-                            <th scope="col">Fecha Salida</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-
-                </table>
-            </div>
-            <nav class="nav_pagination"> </nav>
-
-
+            
 
         </div>
     </div>
