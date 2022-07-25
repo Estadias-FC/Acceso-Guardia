@@ -54,7 +54,7 @@ class AccesoController extends Controller
                 $asistencia->h_entrada = $horario;
                 $asistencia->adscripcion = $adscripcion;
                 $asistencia->estatus = $estatus;
-
+                $asistencia->TurnoID = $request->id;
                 $asistencia->save();
             } else {
 
@@ -66,7 +66,7 @@ class AccesoController extends Controller
                 $asistencia->h_salida = $horario;
                 $asistencia->adscripcion = $adscripcion;
                 $asistencia->estatus = $estatus;
-
+                $asistencia->TurnoID = $request->id;
                 $asistencia->save();
             }
 

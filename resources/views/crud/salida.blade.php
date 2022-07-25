@@ -77,7 +77,7 @@ $hora_actual=date("H:i:s");
   </select>
 
   <br>
-
+<input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
 
 <select class="form-select form-select " aria-label=".form-select" name="estatus">
   <option selected>Estatus</option>

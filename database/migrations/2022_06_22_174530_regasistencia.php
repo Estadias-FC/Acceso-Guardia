@@ -26,7 +26,7 @@ class Regasistencia extends Migration
             $table->string('adscripcion',50)->nullable(true);
             $table->string('estatus',50)->nullable(true);
             $table->string('placas_vehiculos',50)->nullable(true);
-            
+            $table->unsignedBigInteger('TurnoID')->index('users')->nullable(true);
             
             $table->timestamps();
         });

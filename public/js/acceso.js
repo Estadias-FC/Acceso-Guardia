@@ -15,7 +15,7 @@ $(document).ready(function () {
 });
 
 
-function check_entry(codeqr) {
+function check_entry(codeqr,id) {
 
     let params;
     let numero_empleado;
@@ -27,6 +27,7 @@ function check_entry(codeqr) {
 
         params = {
             numero_empleado: numero_empleado,
+            id: id,
         };
     } else {
         numero_empleado = codeqr;

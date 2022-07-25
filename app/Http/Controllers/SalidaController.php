@@ -39,7 +39,7 @@ class SalidaController extends Controller
         $datosSalida = DB::table('regasistencia')->latest();
         $datosSalida->update([
             'f_salida'=>$request->f_salida,
-            'h_salida'=>$request->h_salida
+            'h_salida'=>$request->h_salida,
         ]);
         
         
