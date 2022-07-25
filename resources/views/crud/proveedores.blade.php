@@ -88,7 +88,7 @@ $hora_actual=date("H:i:s");
 </div>
 @endif --}}
 
-<div class="row g-3">
+<div class="row g-2">
 <div class="col">
 Fecha inicio
   <input type="date"  id="inicio" onchange="myFunction()">
@@ -100,8 +100,9 @@ Fecha inicio
 <div class="col">
    <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por nombres..">
 </div>
-<div class="col">
+<div style="width: 150px;">
       <a onclick="ExportToExcel('xlsx')"  class="btn btn-success btn-sm">Exportar</a>
+</div>
 <script>
         function ExportToExcel(type, fn, dl) {
     var elt = document.getElementById('cd');

@@ -108,17 +108,14 @@ Fecha inicio
 <div class="col">
   Fecha fin
   <input type="date"  id="fin" onchange="myFunction()">
-  </div>
+</div>
   <div class="col">
    <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por NumEmp..">
 </div>
 
-
-
-
-
+<div style="width: 150px">
         <a onclick="ExportToExcel('xlsx')"  class="btn btn-success btn-sm">Exportar</a>
-
+</div>
 <script>
         function ExportToExcel(type, fn, dl) {
     var elt = document.getElementById('cd');

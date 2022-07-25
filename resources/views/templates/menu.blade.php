@@ -44,12 +44,12 @@
           <a class="nav-link"  href="consulta" data-toggle="" data-target="">Consulta</a>
         </li>
 
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a class="nav-link"  href="vehiculos" data-toggle="" data-target="">Consulta General</a>
-        </li>
+        </li> --}}
 
         <li class="nav-item">
-          <a class="nav-link"  href="Empleados" data-toggle="" data-target="">Consulta</a>
+          <a class="nav-link"  href="Empleados" data-toggle="" data-target="">Consulta Tablas</a>
         </li>
 
 

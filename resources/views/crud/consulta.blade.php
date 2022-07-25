@@ -41,7 +41,9 @@ $fecha_actual=date("Y-m-d");
     Fecha fin
     <input type="date"  id="fin" onchange="myFunction()">
     </div>
+    <div style="width: 150px;">
     <a onclick="ExportToExcel('xlsx')"  class="btn btn-outline-success">Exportar</a>
+    </div>
     <script>
             function ExportToExcel(type, fn, dl) {
           var elt = document.getElementById('exportable');
