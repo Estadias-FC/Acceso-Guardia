@@ -37,9 +37,10 @@ $hora_actual=date("H:i:s");
 <input type="time" class="form-control" name="Hora" value="<?= $hora_actual?>">
 </div>
 </div>
+<br>
 
-<div class="col-auto p-5 text-center ">
-<select class="form-select" name="adscripcion">
+<div class="col-auto p-2 text-center ">
+<select class="form-select" style="width: 55%;" name="adscripcion">
   <option selected>Adscripcion</option>
   <option value="COMISARÍA Y AYUDANTÍA">COMISARÍA Y AYUDANTÍA</option>
   <option value="JEFATURA DE ESTADO MAYOR">JEFATURA DE ESTADO MAYOR</option>
@@ -75,21 +76,25 @@ $hora_actual=date("H:i:s");
   <option value="COMISARIA DE PROTECCION INSTITUCIONAL">COMISARIA DE PROTECCION INSTITUCIONAL</option>
   <option value="OTRA">OTRA</option>
 </select>
+</div>
 
-
-<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="estatus">
+<div class="col-auto p-2 text-center  " >
+<select class="form-select" style="width: 30%;" name="estatus">
   <option selected>Estatus</option>
   <option value="ACTIVO">Activo</option>
   <option value="BAJA">Baja</option>
 </select>
+</div>
 
-
-<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="Motivo">
+<div class="col-auto p-2 text-center " >
+<select class="form-select" style="width: 30%;" name="Motivo">
   <option selected>Motivo</option>
   <option value="Entrada">Entrada</option>
   <option value="Salida">Salida</option>
 </select>
 </div>
+
+<input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
 
 <div class="col-auto p-5 text-center">
 <input class ="btn btn-success btn-lg" type="submit" center value="Guardar">

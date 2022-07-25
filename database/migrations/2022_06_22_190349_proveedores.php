@@ -25,6 +25,7 @@ class Proveedores extends Migration
             $table->date('Fecha');
             $table->time('h_entrada');
             $table->time('h_salida')->nullable(true);
+            $table->unsignedBigInteger('TurnoID')->index('users');
             $table->timestamps();
         });
     }

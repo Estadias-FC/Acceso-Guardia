@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 
 <?php
 date_default_timezone_set('America/Monterrey');
@@ -26,10 +27,32 @@ $fecha_actual=date("Y-m-d");
     
                 </div> --}}
             </form>
-        </div>
-        <div class="col"> Buscar por número de empleado:
-          <input  type="text" placeholder="Buscar..." id="mySearch">
-         </div>
+
+      
+
+        
+        
+<div class="row g-2">
+  <div class="col ">
+  Fecha inicio
+    <input type="date"  id="inicio" onchange="myFunction()">
+    </div>
+    <div class="col">
+    Fecha fin
+    <input type="date"  id="fin" onchange="myFunction()">
+    </div>
+    <a onclick="ExportToExcel('xlsx')"  class="btn btn-outline-success">Exportar</a>
+    <script>
+            function ExportToExcel(type, fn, dl) {
+          var elt = document.getElementById('exportable');
+          var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1",dateNF:'dd/mm/yyyy;@',timeNF:'HH:mm;@',cellDates:true,raw:true });
+          return dl ?
+          XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
+          XLSX.writeFile(wb, fn || ('Asistencia.' + (type || 'xlsx')));
+    }
+    </script>
+
+
         <div class="card1">
         <div style="background-color:#c58845" class="alert alert-primary d-flex" role="alert">
                     <div>
@@ -75,7 +98,7 @@ $fecha_actual=date("Y-m-d");
     <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
 
 
-<script>
+{{-- <script>
 
 var tables1 = $('.mytables1').DataTable({
       "dom": '<"top"i>rt<"bottom">p<"clear">',
@@ -97,8 +120,52 @@ var tables1 = $('.mytables1').DataTable({
     });
 
 
-</script>
+</script> --}}
 
+
+<script>
+  function verify(){
+      if(document.getElementById("inicio").value=='' || document.getElementById("fin").value==''){
+          return false;
+      }
+      return true;
+  }
+
+  function myFunction() {
+      if(!verify())return;
+
+    var inicio, fin, filter, table, tr, td, i, txtValue;
+    inicio = document.getElementById("inicio");
+    fin = document.getElementById("fin");
+    inicio = inicio.value.toUpperCase();
+    fin = fin.value.toUpperCase();
+    table = document.getElementById("exportable");
+    tr = table.getElementsByTagName("tr");
+
+
+
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+
+        if (txtValue.slice(1,4) >= inicio.slice(1,4) && txtValue.slice(1,4) <= fin.slice(1,4)) {
+          if(txtValue.slice(5,7) >= inicio.slice(5,7) && txtValue.slice(5,7) <= fin.slice(5,7)){
+              if(txtValue.slice(8,10) >= inicio.slice(8,10) && txtValue.slice(8,10) <= fin.slice(8,10)){
+                  tr[i].style.display = "";
+              } else {
+          tr[i].style.display = "none";
+        }
+          } else {
+          tr[i].style.display = "none";
+        }
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
 
 {{-- <script>
     function myFunction1() {

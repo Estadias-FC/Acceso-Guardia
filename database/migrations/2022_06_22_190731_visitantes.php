@@ -25,8 +25,10 @@ class Visitantes extends Migration
             $table->date('Fecha');
             $table->string('Asunto');
             $table->string('Identificacion');
+
             $table->time('h_entrada');
             $table->time('h_salida')->nullable(true);
+            $table->unsignedBigInteger('TurnoID')->index('users');
 
 
             $table->timestamps();

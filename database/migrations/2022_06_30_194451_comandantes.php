@@ -24,6 +24,7 @@ class Comandantes extends Migration
             $table->string('adscripcion');
             $table->string('estatus');
             $table->string('motivo');
+            $table->unsignedBigInteger('TurnoID')->index('users');
             $table->timestamps();
         });
     }

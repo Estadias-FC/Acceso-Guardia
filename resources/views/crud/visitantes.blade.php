@@ -77,6 +77,8 @@ $hora_actual=date("H:i:s");
 </div>
 </div>
 
+<input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
+
 <div class="col-auto p-5 text-center">
 <input class ="btn btn-success btn-lg" type="submit" center value="Guardar">
 <a class ="btn btn-primary btn-lg" href="acceso"> Volver </a>
@@ -110,7 +112,9 @@ Fecha inicio
   <div class="col">
    <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por NumEmp..">
 </div>
+
         <a onclick="ExportToExcel('xlsx')"  class="btn btn-success btn-sm">Exportar</a>
+
 <script>
         function ExportToExcel(type, fn, dl) {
     var elt = document.getElementById('cd');

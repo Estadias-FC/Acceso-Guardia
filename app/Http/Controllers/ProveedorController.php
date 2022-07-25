@@ -49,6 +49,7 @@ class ProveedorController extends Controller
         $datosProveedores->h_entrada = $request->post('h_entrada');
         $datosProveedores->h_salida = $request->post('h_salida');
         $datosProveedores->fecha = $request->post('fecha');
+        $datosProveedores->TurnoID = $request->post('TurnoID');
         $datosProveedores->save();
 
         return redirect()->route("proveedores.index")->with("success", "Actualizado con Exito!");

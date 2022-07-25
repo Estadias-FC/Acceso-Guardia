@@ -96,7 +96,7 @@
                                     @endif -->
                                 @else
                                     <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="btn btn-primary btn-lg active" >
+                                        <a id="navbarDropdown" class="btn btn-primary  active" >
                                             {{ Auth::user()->name }}
                                         </a>
 

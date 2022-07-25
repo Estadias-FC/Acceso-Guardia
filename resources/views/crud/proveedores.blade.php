@@ -64,6 +64,7 @@ $hora_actual=date("H:i:s");
 <input type="time" class="form-control" name="h_salida"required>
 </div></div>
 
+<input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
 
 <div class="col-auto p-5 text-center">
 <input class ="btn btn-success  btn-lg" type="submit" center value="Guardar">
@@ -173,6 +174,8 @@ Fecha inicio
                 }
               }
               </script>
+
+              
             <script>
                 function verify(){
                     if(document.getElementById("inicio").value=='' || document.getElementById("fin").value==''){

@@ -63,4 +63,4 @@ Route::put('/update/{id}',[VisitantesController::class,'update'])->name('crud.up
 
 Route::get('vehiculos', [ConsultaVeController::class,'index'])->name('vehiculos.index')->middleware('auth');
 
-Route::get('Empleados',[ConsultaEmpController::class,'index'])->name('empleados.index')->middleware('auth');
+Route::get('Empleados',[ConsultaEmpController::class,'index']);

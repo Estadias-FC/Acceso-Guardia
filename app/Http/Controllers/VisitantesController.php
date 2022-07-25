@@ -46,6 +46,7 @@ class VisitantesController extends Controller
         $datosVisitantes->Identificacion=$request->post('Identificacion');
         $datosVisitantes->h_entrada=$request->post('h_entrada');
         $datosVisitantes->h_salida=$request->post('h_salida');
+        $datosVisitantes->TurnoID=$request->post('TurnoID');
         $datosVisitantes->save();
 
         return redirect()->route('visitantes.index')->with('success','Actualizado con Exito!');

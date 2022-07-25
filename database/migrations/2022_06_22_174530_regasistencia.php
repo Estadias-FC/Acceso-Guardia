@@ -27,6 +27,7 @@ class Regasistencia extends Migration
             $table->string('estatus',50)->nullable(true);
             $table->string('placas_vehiculos',50)->nullable(true);
             
+            
             $table->timestamps();
         });
     }

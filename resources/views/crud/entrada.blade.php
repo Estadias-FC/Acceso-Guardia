@@ -37,8 +37,8 @@ $hora_actual=date("H:i:s");
 <input type="time" class="form-control" name="h_entrada" value="<?= $hora_actual?>">
 </div>
 </div>
-
-<div class="col-auto p-5 text-center ">
+<br>
+<div class="col md-5  ">
   <select class="form-select" name="adscripcion" required>
     <option value="COMISARÍA Y AYUDANTÍA">COMISARÍA Y AYUDANTÍA</option>
     <option value="JEFATURA DE ESTADO MAYOR">JEFATURA DE ESTADO MAYOR</option>
@@ -75,10 +75,14 @@ $hora_actual=date("H:i:s");
     <option value="OTRA">OTRA</option>
   </select>
 
+  <br>
+  
 <select class="form-select" name="estatus">
   <option value="ACTIVO">Activo</option>
   <option value="BAJA">Baja</option>
 </select>
+
+
 
 <div class="col-auto p-5 text-center">
 <input class ="btn btn-success btn-lg" type="submit" center value="Guardar">

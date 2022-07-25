@@ -22,6 +22,7 @@ class Observaciones extends Migration
             $table->date('Fecha');
             $table->time('hora');
             $table->string('comentarios');
+            $table->unsignedBigInteger('TurnoID')->index('users');
             $table->timestamps();
         });
     }
