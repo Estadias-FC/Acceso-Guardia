@@ -1,6 +1,5 @@
 
 
-
 @include ('templates.header')
 @include ('templates.menu')
 
@@ -33,7 +32,7 @@ $fecha_actual=date("Y-m-d");
     </div>
     
     <div style="float: left;">
-    <select onchange="mostrarTabla()" name="txt" class="form-select "  style="width: 30%;" id="Seleccionar" >
+    <select onchange="mostrarTabla()" name="txt" class="form-select"  style="width: 30%;" id="Seleccionar" >
         <option>Seleccionar una tabla</option>
         <option value="empleados">Empleados</option>
         <option value="vehiculos">Vehiculos</option>
@@ -50,7 +49,7 @@ $fecha_actual=date("Y-m-d");
                 </div>
             </div>
 
-
+            <div class="table table-striped table-hover table-bordered" id="cd">
             <div class="container">
                 <div class="table table-wrapper-scroll-x my-custom-scrollbar">
                     <table id="vehiculos" class="display nowrap mytables1 hidden" style="width:100%">
@@ -268,7 +267,7 @@ function mostrarTabla() {
   <style>
   .consulta{
     margin: 0 auto;
-    width: 900px;
+    width: 1010px;
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
@@ -277,7 +276,7 @@ function mostrarTabla() {
 
   .card1{
     margin: 0 auto;
-    width: 900px;
+    width: 920px;
     text-align:center;
     padding: 15px;
   }

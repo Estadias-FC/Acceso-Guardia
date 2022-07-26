@@ -37,8 +37,9 @@ $hora_actual=date("H:i:s");
 <input type="time" class="form-control" name="h_salida" value="<?= $hora_actual?>">
 </div>
 </div>
-
-<div class="col-auto p-3 width=90; text-center ">
+<br>
+<div class="row">
+<div class="col text-center ">
   <select class="form-select" name="adscripcion" required>
     <option selected>Adscripcion</option>
     <option value="COMISARÍA Y AYUDANTÍA">COMISARÍA Y AYUDANTÍA</option>
@@ -74,18 +75,17 @@ $hora_actual=date("H:i:s");
     <option value="GRUPO FUERZA DE REACCION S.S.P.E.">GRUPO FUERZA DE REACCION S.S.P.E.</option>
     <option value="COMISARIA DE PROTECCION INSTITUCIONAL">COMISARIA DE PROTECCION INSTITUCIONAL</option>
     <option value="OTRA">OTRA</option>
-  </select>
+  </select></div>
 
   <br>
 <input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
 
-<select class="form-select form-select " aria-label=".form-select" name="estatus">
+<div class="col">
+<select class="form-select form-select mb-5" aria-label=".form-select example" name="estatus">
   <option selected>Estatus</option>
   <option value="ACTIVO">Activo</option>
   <option value="BAJA">Baja</option>
-</select>
-
-
+</select></div></div>
 
 <div class="col-auto p-5 text-center">
 <input class ="btn btn-success btn-lg" type="submit" center value="Guardar">

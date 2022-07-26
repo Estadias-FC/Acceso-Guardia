@@ -39,8 +39,9 @@ $hora_actual=date("H:i:s");
 </div>
 <br>
 
-<div class="col-auto p-2 text-center ">
-<select class="form-select" style="width: 55%;" name="adscripcion">
+<div class="row">
+<div class="col text-center ">
+<select class="form-select"  name="adscripcion" required>
   <option selected>Adscripcion</option>
   <option value="COMISARÍA Y AYUDANTÍA">COMISARÍA Y AYUDANTÍA</option>
   <option value="JEFATURA DE ESTADO MAYOR">JEFATURA DE ESTADO MAYOR</option>
@@ -75,24 +76,23 @@ $hora_actual=date("H:i:s");
   <option value="GRUPO FUERZA DE REACCION S.S.P.E.">GRUPO FUERZA DE REACCION S.S.P.E.</option>
   <option value="COMISARIA DE PROTECCION INSTITUCIONAL">COMISARIA DE PROTECCION INSTITUCIONAL</option>
   <option value="OTRA">OTRA</option>
-</select>
-</div>
+</select></div>
 
-<div class="col-auto p-2 text-center  " >
-<select class="form-select" style="width: 30%;" name="estatus">
+<div class="col text-center" >
+<select class="form-select"  name="estatus">
   <option selected>Estatus</option>
   <option value="ACTIVO">Activo</option>
   <option value="BAJA">Baja</option>
 </select>
 </div>
 
-<div class="col-auto p-2 text-center " >
-<select class="form-select" style="width: 30%;" name="Motivo">
+<div class="col text-center" >
+<select class="form-select"  name="Motivo">
   <option selected>Motivo</option>
   <option value="Entrada">Entrada</option>
   <option value="Salida">Salida</option>
 </select>
-</div>
+</div></div>
 
 <input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
 

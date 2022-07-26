@@ -125,7 +125,7 @@ Fecha inicio
       XLSX.writeFile(wb, fn || ('Visitantes.' + (type || 'xlsx')));
 }
 </script>
-</div></div>
+</div></div><br>
 
 <div style="background-color:#c58845" class="alert alert-primary d-flex" role="alert">
                 <div>

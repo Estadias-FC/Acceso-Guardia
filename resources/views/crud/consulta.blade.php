@@ -64,7 +64,7 @@ $fecha_actual=date("Y-m-d");
     
     
     <div class="container">
-        <div class="table table-wrapper-scroll-x my-custom-scrollbar">
+        <div class="table table-wrapper-scroll-x my-custom-scrollbar table-striped table-hover table-bordered">
             <table id="exportable" class="display nowrap mytables1" style="width:100%">
                 <thead>
                     <tr>
