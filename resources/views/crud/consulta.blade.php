@@ -24,15 +24,18 @@ $fecha_actual=date("Y-m-d");
                         <input type="submit" class="btn btn-primary btn-lg" value="Buscar">
                         <input type="submit" class="btn btn-success btn-lg" value="Mostrar todo"  href="consulta">
                     </div>
-    
+
                 </div> --}}
             </form>
 
-      
 
-        
-        
+
+
+
 <div class="row g-2">
+    <div class="col">
+        <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por NumEmpleado..">
+     </div>
   <div class="col ">
   Fecha inicio
     <input type="date"  id="inicio" onchange="myFunction()">
@@ -61,8 +64,8 @@ $fecha_actual=date("Y-m-d");
                         <h2></h2>
                     </div>
                 </div>
-    
-    
+
+
     <div class="container">
         <div class="table table-wrapper-scroll-x my-custom-scrollbar table-striped table-hover table-bordered">
             <table id="exportable" class="display nowrap mytables1" style="width:100%">
@@ -126,6 +129,30 @@ var tables1 = $('.mytables1').DataTable({
 
 </script> --}}
 
+
+<script>
+    function myFunction1() {
+
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("exportable");
+      tr = table.getElementsByTagName("tr");
+
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
 
 <script>
   function verify(){

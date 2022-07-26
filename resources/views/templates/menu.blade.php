@@ -11,7 +11,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">              
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="acceso" >Acceso</a>
         </li>
@@ -40,23 +40,33 @@
           <a class="nav-link"  href="proveedores" data-toggle="" data-target="">Proveedores</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link"  href="consulta" data-toggle="" data-target="">Consulta</a>
-        </li>
+        {{-- <li class="nav-item">
+            <a class="nav-link"  href="consulta" data-toggle="" data-target="">Consulta</a>
+        </li> --}}
 
         {{-- <li class="nav-item">
           <a class="nav-link"  href="vehiculos" data-toggle="" data-target="">Consulta General</a>
         </li> --}}
 
-        <li class="nav-item">
-          <a class="nav-link"  href="Empleados" data-toggle="" data-target="">Consulta Tablas</a>
-        </li>
+        <div class="dropdown">
+            <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Consulta tablas
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="ConsEmpleados">Empleados</a></li>
+              <li><a class="dropdown-item" href="ConsVehiculos">Vehiculos</a></li>
+              <li><a class="dropdown-item" href="consulta">Asistencia</a></li>
+              <li><a class="dropdown-item" href="ConsVisitantes">Visitantes</a></li>
+              <li><a class="dropdown-item" href="ConsProveedores">Proveedores</a></li>
+            </ul>
+          </div>
 
 
         </li>
       </ul>
     </div>
-  
+
   <div id="app">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
@@ -71,7 +81,7 @@
 
                             <!-- Right Side Of Navbar -->
                             <ul class="navbar-nav ms-auto">
-                                
+
                                 <!-- Authentication Links -->
                                 @guest
                                     @if (Route::has('login'))
@@ -94,7 +104,7 @@
 
                                     </li>
                                 @endguest
-                                
+
                             </ul>
                         </div>
                     </div>

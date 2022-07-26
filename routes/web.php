@@ -64,3 +64,8 @@ Route::put('/update/{id}',[VisitantesController::class,'update'])->name('crud.up
 Route::get('vehiculos', [ConsultaVeController::class,'index'])->name('vehiculos.index')->middleware('auth');
 
 Route::get('Empleados',[ConsultaEmpController::class,'index']);
+
+Route::get('ConsEmpleados',[App\Http\Controllers\ConsEmp::class,'index']);
+Route::get('ConsProveedores',[App\Http\Controllers\ConsProv::class,'index']);
+Route::get('ConsVisitantes',[App\Http\Controllers\ConsVisi::class,'index']);
+Route::get('ConsVehiculos',[\App\Http\Controllers\ConsVehi::class,'index']);
