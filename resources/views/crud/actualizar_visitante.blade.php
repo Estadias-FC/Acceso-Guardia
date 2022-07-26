@@ -45,7 +45,7 @@ $hora_actual=date("H:i:s");
 </div>
 
 <div class="form-group">
-<label for="h_salida">Identidicacion</label>
+<label for="h_salida">Identificacion</label>
 <input type="text" class="form-control" name="Identificacion" value="{{$datosVisitantes->Identificacion}}"required>
 </div>
 

@@ -126,6 +126,7 @@ $fecha_actual=date("Y-m-d");
                                 <th>Asunto</th>
                                 <th>Hora de entrada</th>
                                 <th>Hora de salida</th>
+                                <th>Turno que registro</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -138,6 +139,7 @@ $fecha_actual=date("Y-m-d");
                                 <td>{{$pro->Asunto}} </td>
                                 <td>{{$pro->h_entrada}} </td>
                                 <td>{{$pro->h_salida}} </td>
+                                <td>{{$pro->TurnoID  }}</td>
                         </tr>
                     @endforeach
                         </tbody>
@@ -159,6 +161,7 @@ $fecha_actual=date("Y-m-d");
                                 <th>Identificación (CIC)</th>
                                 <th>Hora de entrada</th>
                                 <th>Hora de salida</th>
+                                <th>Turno que registro</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -173,6 +176,7 @@ $fecha_actual=date("Y-m-d");
                                 <td>{{$vis->Identificacion}} </td>
                                 <td>{{$vis->h_entrada}}</td>
                                 <td>{{$vis->h_salida}}</td>
+                                <td>{{$vis->TurnoID}}</td>
                         </tr>
                     @endforeach
                         </tbody>
@@ -191,6 +195,7 @@ $fecha_actual=date("Y-m-d");
                                 <th>Hora de entrada</th>
                                 <th>Fecha de salida</th>
                                 <th>Hora de salida</th>
+                                <th>Turno que registro</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -201,6 +206,7 @@ $fecha_actual=date("Y-m-d");
                             <td>{{ $asi->h_entrada}}</td>
                             <td>{{ $asi->f_salida}}</td>
                             <td>{{ $asi->h_salida}}</td>
+                            <td>{{ $asi->TurnoID }}</td>
                         </tr>
                     @endforeach
                         </tbody>

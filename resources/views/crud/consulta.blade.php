@@ -73,6 +73,7 @@ $fecha_actual=date("Y-m-d");
                         <th>Hora de entrada</th>
                         <th>Fecha de salida</th>
                         <th>Hora de salida</th>
+                        <th>Turno que registro</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -83,6 +84,7 @@ $fecha_actual=date("Y-m-d");
                     <td>{{ $consulta->h_entrada}}</td>
                     <td>{{ $consulta->f_salida}}</td>
                     <td>{{ $consulta->h_salida}}</td>
+                    <td>{{ $consulta->TurnoID }}</td>
                 </tr>
             @endforeach
                 </tbody>
