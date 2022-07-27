@@ -17,6 +17,7 @@ $hora_actual=date("H:i:s");
 </div>
 @endif
 
+<div class="contenedor">
 <form action="{{url('entrada')}}" method="post" enctype="multipart/form-data">
 @csrf
 <h1 class="text-center">Registro de entrada</h1>
@@ -86,8 +87,9 @@ $hora_actual=date("H:i:s");
 <input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
 
 <div class="col-auto p-5 text-center">
-<input class ="btn btn-success btn-lg" type="submit" center value="Guardar">
-<a class ="btn btn-primary btn-lg" href="acceso"> Volver <a/>
+<input class ="btn btn-success " type="submit" center value="Guardar">
+<a class ="btn btn-primary " href="acceso"> Volver <a/>
+</div>
 </div>
 
 
@@ -96,10 +98,15 @@ $hora_actual=date("H:i:s");
   <style>
   form{
     margin: 0 auto;
-    width: 900px;
+    width: 80%;
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
     
+  }
+
+  .contenedor{
+    display: flex;
+    margin: 0 auto;
   }
 

@@ -49,8 +49,8 @@ $hora_actual=date("H:i:s");
 <input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
 
 <div class="col-auto p-5 text-center">
-<input class ="btn btn-success btn-lg" type="submit" center value="Actualizar">
-<a class ="btn btn-primary btn-lg" href="/proveedores"> Volver <a/>
+<input class ="btn btn-success " type="submit" center value="Actualizar">
+<a class ="btn btn-primary " href="/proveedores"> Volver <a/>
 </div>
 
 
@@ -59,7 +59,7 @@ $hora_actual=date("H:i:s");
 <style>
   form{
     margin: 0 auto;
-    width: 900px;
+    width: 80%;
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;

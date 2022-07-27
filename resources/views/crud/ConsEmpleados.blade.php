@@ -147,22 +147,21 @@
 
   <!----------------------------CSS--------------------->
 <style>
-  form{
-    margin: 0 auto;
-    width: 1000px;
-    border: 5px #c58845 solid;
-    border-radius: 5px;
-    padding: 15px;
-
-  }
-
+  
   .card1{
     margin: 0 auto;
-    width: 1000px;
+    width: 80%;
     text-align:center;
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
   }
 
+  .my-custom-scrollbar {
+    position: relative; 
+    overflow: auto;
+    }
+    .table-wrapper-scroll-x {
+    display: block;
+    }
 </style>

@@ -64,15 +64,15 @@ $hora_actual=date("H:i:s");
     </div>
 
 <div class="col-auto p-5 text-center">
-<input class ="btn btn-success btn-lg" type="submit" center value="Actualizar">
-<a class ="btn btn-primary btn-lg" href="/visitantes"> Volver <a/>
+<input class ="btn btn-success " type="submit" center value="Actualizar">
+<a class ="btn btn-primary " href="/visitantes"> Volver <a/>
 </div>
 
   <!----------------------------CSS--------------------->
   <style>
   form{
     margin: 0 auto;
-    width: 960px;
+    width: 80%;
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;

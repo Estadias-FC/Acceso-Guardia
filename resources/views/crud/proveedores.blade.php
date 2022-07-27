@@ -22,6 +22,7 @@ $hora_actual=date("H:i:s");
     <p>{{ $message }}</p>
 </div>
 @endif
+<div class="contenedor">
 <!----------------FORMULARIO--------------->
 <form action="{{url('proveedores')}}" method="post" enctype="multipart/form-data">
 @csrf
@@ -67,13 +68,15 @@ $hora_actual=date("H:i:s");
 <input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
 
 <div class="col-auto p-5 text-center">
-<input class ="btn btn-success  btn-lg" type="submit" center value="Guardar">
-<a class ="btn btn-primary  btn-lg" href="/acceso"> Volver </a>
+<input class ="btn btn-success " type="submit" center value="Guardar">
+<a class ="btn btn-primary" href="/acceso"> Volver </a>
 </div>
 </form>
 
 
-<br><br>
+<br>
+</div>
+<br>
 
 <!---------------TABLA DEL LISTADO DE PROVEEDORES EN EL SISTEMA-------->
 <div class="card1">
@@ -231,7 +234,7 @@ Fecha inicio
 <style>
   form{
     margin: 0 auto;
-    width: 900px;
+    width: 80%;
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
@@ -240,13 +243,22 @@ Fecha inicio
 
   .card1{
     margin: 0 auto;
-    width: 900px;
+    width: 80%;
     text-align:center;
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
   }
 
+  .my-custom-scrollbar {
+    position: relative; 
+    overflow: auto;
+    }
+    .table-wrapper-scroll-x {
+    display: block;
+    }
+
+   
 
 </style>
 

@@ -227,7 +227,8 @@ var tables1 = $('.mytables1').DataTable({
 <style>
   .consulta{
     margin: 0 auto;
-    width: 900px;
+    width: 80%;
+    text-align:center;
     border: 5px #c58845 solid;
     border-radius: 5px;
     padding: 15px;
@@ -240,4 +241,12 @@ var tables1 = $('.mytables1').DataTable({
     text-align:center;
     padding: 15px;
   }
+
+  .my-custom-scrollbar {
+    position: relative; 
+    overflow: auto;
+    }
+    .table-wrapper-scroll-x {
+    display: block;
+    }
 </style>
