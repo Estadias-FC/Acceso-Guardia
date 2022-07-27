@@ -20,7 +20,7 @@
 
 <div class="row g-3">
   <div class="col">
-   <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por NumEmp..">
+   <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Buscar por Matricula">
 </div>
 
 <div style="width: 150px">
@@ -150,7 +150,7 @@
   }
 
   .my-custom-scrollbar {
-    position: relative; 
+    position: relative;
     overflow: auto;
     }
     .table-wrapper-scroll-x {
