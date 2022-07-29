@@ -86,6 +86,7 @@ $hora_actual=date("H:i:s");
 
 <input type="text" name="TurnoID" value={{Auth::user()->id}} hidden>
 
+
 <div class="col-auto p-5 text-center">
 <input class ="btn btn-success " type="submit" center value="Guardar">
 <a class ="btn btn-primary " href="acceso"> Volver <a/>

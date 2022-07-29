@@ -2,11 +2,16 @@ var audio_beep = new Audio('/sounds/beep.mp3');
 var num_registros = 0;
 var blink = true;
 
+
+
 $(document).ready(function() {
 
+
     $('#numero_empleado').on("keypress", function(e) {
+
         if (e.keyCode == 13) {
-            check_entry();
+            let turno = $('#Turno').val();
+            check_entry(null,turno);
         }
     });
 
@@ -15,10 +20,14 @@ $(document).ready(function() {
 });
 
 
-function check_entry(codeqr, id) {
 
+
+
+function check_entry(codeqr, id) {
+console.log(id);
     let params;
     let numero_empleado;
+
 
     if (codeqr == null) {
         numero_empleado = $("#numero_empleado").val();
@@ -27,8 +36,10 @@ function check_entry(codeqr, id) {
 
         params = {
             numero_empleado: numero_empleado,
-            id: id,
+            id: id
         };
+
+        console.log(params);
     } else {
         numero_empleado = codeqr;
         params = {

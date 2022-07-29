@@ -20,11 +20,11 @@
         <div class="col-md-4 reloj d-flex align-items-center">
             <label></label>
         </div>
-
+        <input type="text" id="Turno" value={{ Auth::user()->id }} hidden>
         <div class="col-md-4 col_numero_empleado d-flex align-items-center">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" id="numero_empleado" placeholder="N&uacute;mero de Empleado">
-                <button type="submit" class="btn btn-success btn-flat" onclick="javascript:check_entry(null,{{Auth::user()->id}})"><i class="fas fa-check"></i></button>
+                <button id="submit" class="btn btn-success btn-flat" onclick="javascript:check_entry(null,{{ Auth::user()->id }})"><i class="fas fa-check"></i></button>
             </div>
         </div>
     </div>

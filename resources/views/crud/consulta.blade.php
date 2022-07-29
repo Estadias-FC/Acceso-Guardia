@@ -81,6 +81,7 @@ $fecha_actual=date("Y-m-d");
                 </thead>
                 <tbody>
             @foreach($consultas as $consulta)
+            @if(isset($consulta->TurnoID))
                 <tr>
                     <td>{{ $consulta->NoEmp}}</td>
                     <td>{{ $consulta->f_entrada}}</td>
@@ -89,6 +90,7 @@ $fecha_actual=date("Y-m-d");
                     <td>{{ $consulta->h_salida}}</td>
                     <td>{{ $consulta->TurnoID }}</td>
                 </tr>
+            @endif
             @endforeach
                 </tbody>
             </table>
