@@ -2,9 +2,9 @@ var audio_beep = new Audio('/sounds/beep.mp3');
 var num_registros = 0;
 var blink = true;
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $('#numero_empleado').on("keypress", function (e) {
+    $('#numero_empleado').on("keypress", function(e) {
         if (e.keyCode == 13) {
             check_entry();
         }
@@ -15,7 +15,7 @@ $(document).ready(function () {
 });
 
 
-function check_entry(codeqr,id) {
+function check_entry(codeqr, id) {
 
     let params;
     let numero_empleado;
@@ -54,9 +54,9 @@ function check_entry(codeqr,id) {
         return;
     }
 
-    axios.post("check_entry", params).then(function (response) {
+    axios.post("check_entry", params).then(function(response) {
 
-      
+
         let response_code = response.data[0];
 
         if (response_code == 0) {
@@ -75,24 +75,52 @@ function check_entry(codeqr,id) {
             let Situacion = empleado[0]["Situacion"];
             let Observaciones = empleado[0]["Observaciones"];
 
-            $("#table_informacion_personal tbody").empty().append(
+            $("#table_informacion_personal thead").empty().append(
                 "<tr>" +
+                "<th>" + "No.Emp." + "</th>" +
                 "<td>" + numero_empleado + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<th>" + "Grado" + "</th>" +
                 "<td>" + Grado + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<th>" + "Nombre Completo" + "</th>" +
                 "<td>" + NombreCompleto + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<th>" + "Adscripcion" + "</th>" +
                 "<td>" + Adscripcion + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<th>" + "Genero" + "</th>" +
                 "<td>" + Genero + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<th>" + "Bloque" + "</th>" +
                 "<td>" + Bloque + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<th>" + "Estatus" + "</th>" +
                 "<td>" + Estatus + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<th>" + "Institucion" + "</th>" +
                 "<td>" + Institucion + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<th>" + "Situacion" + "</th>" +
                 "<td>" + Situacion + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<th>" + "Observaciones" + "</th>" +
                 "<td>" + Observaciones + "</td>" +
                 "</tr>"
             );
 
             if (vehiculos.length == 0) {
 
-                $("#table_vehiculos tbody").empty().append(
+                $("#table_vehiculos thead").empty().append(
                     "<tr>" +
                     "<td colspan='5' align='center'>Usted no posee ningun vehiculo registrado a su nombre</td>" +
                     "</tr>"
@@ -105,12 +133,25 @@ function check_entry(codeqr,id) {
                     let Color = element["Color"];
                     let Vigencia = element["Vigencia"];
 
-                    $("#table_vehiculos tbody").empty().append(
+                    $("#table_vehiculos thead").empty().append(
                         "<tr>" +
+                        "<th>" + "Matricula" + "</th>" +
                         "<td>" + NoPlacas + "</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                        "<th>" + "Marca" + "</th>" +
                         "<td>" + Marca + "</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                        "<th>" + "Modelo" + "</th>" +
                         "<td>" + Modelo + "</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                        "<th>" + "Color" + "</th>" +
                         "<td>" + Color + "</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                        "<th>" + "Vigencia" + "</th>" +
                         "<td>" + Vigencia + "</td>" +
                         "</tr>"
                     );
@@ -161,8 +202,8 @@ function check_entry(codeqr,id) {
 function refresh_table_registro(page) {
     let params = { "page": page };
 
-    axios.post("refresh_table_registro", params).then(function (response) {
-      
+    axios.post("refresh_table_registro", params).then(function(response) {
+
         let asistencias = response.data.data;
         let total_pages = response.data.last_page;
 
@@ -225,7 +266,7 @@ function refresh_table_registro(page) {
             total: total_pages,
             page: page,
             maxVisible: 10
-        }).on('page', function (event, num) {
+        }).on('page', function(event, num) {
             console.log("page " + num)
             refresh_table_registro(num);
         });

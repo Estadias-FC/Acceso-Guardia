@@ -29,8 +29,8 @@
         </div>
     </div>
 
-    <div class="row div_main_data justify-content-center">
-        <div class="col-md-5 col_div_img_logo">
+    <div class="row div_main_data ">
+        <div class="col-md-4 d-flex align-items-center">
             <div style="width: 80% center; ">
                 <img src="{{asset('images/fc_logo.png')}}" id="person_logo" alt="person_logo" class="rounded-circle" alt="Imagen Empleado">
 
@@ -44,48 +44,121 @@
     <!--<div class="separator-small"></div>
 
     <div class="row div_registro">-->
-        <div class="col-md-4">
+        <div class="col-md-3 d-flex align-items-center">
             
             @include('templates.camera')
 
             <div class="separator-small"></div>
         </div>
-        <div class="separator-small"></div>
+   
 
-        <div class="col-md-8">
-           
-
-            <div style="background-color:#c58845" class="alert alert-primary d-flex align-items-center" role="alert">
+        <div class="col-md-2 ">
+     
+           <div style="background-color:#c58845" class="alert alert-primary " role="alert">
                 <div>
                     <h2>Informaci&oacute;n del Personal</h2>
                 </div>
             </div>
-            <div class="table-wrapper-scroll-x my-custom-scrollbar">
-                <table class="table table-striped table-hover table-bordered" id="table_informacion_personal">
+            <div class="table-wrapper-scroll-x my-custom-scrollbar ">
+                <table class="table table-striped table-hover table-bordered table-sm" id="table_informacion_personal">
                     <thead>
+                   
                         <tr>
                             <!-- <th scope="col">No.</th> -->
                             <th scope="col">No.Emp.</th>
+                        </tr> 
+                        <tr>   
                             <th scope="col">Grado</th>
+                        </tr> 
+                        <tr>   
                             <th scope="col">Nombre Completo</th>
+                        </tr>
+                        <tr> 
                             <th scope="col">Adscripcion</th>
+                        </tr>
+                        <tr>      
                             <th scope="col">Genero</th>
+                        </tr>
+                        <tr>      
                             <th scope="col">Bloque</th>
+                        </tr>
+                        <tr>      
                             <th scope="col">Estatus</th>
+                        </tr>
+                        <tr>      
                             <th scope="col">Institucion</th>
+                        </tr>
+                        <tr>  
                             <th scope="col">Situacion</th>
+                        </tr>
+                        <tr>  
                             <th scope="col">Observaciones</th>
                         </tr>
+                        <tr></tr>
                     </thead>
+                   
                     <tbody> </tbody>
 
                 </table>
+                
             </div>
 
             <div class="separator-small"></div>
+            </div>
+            <div class="col-md-2 ">
+           
+
+            <div style="background-color:#c58845" class="alert alert-primary d-flex align-items-center" role="alert">
+                <div>
+                    <h2>Vehículos</h2>
+                </div>
+            </div>
+            <div class="table-wrapper-scroll-x my-custom-scrollbar">
+                    <table class="table table-striped table-hover table-bordered" id="table_vehiculos">
+                        <thead>
+                            <tr>
+                                <th scope="col-6">Matricula</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">Marca</th>
+                            </tr>
+                            <tr>    
+                                <th scope="col">Modelo</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">Color</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">Vigencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+    
+                    </table>
+            
+            <nav class="nav_pagination"> </nav>
+
+          
+       
+        </div>
+        <div class="separator-small"></div>
+
         
-        <div class="row div_registro">
-        <div class="col-md-">
+       
+
+
+
+        </div>
+        
+    </div>
+<div><div class="separator-small"></div>
+</div>
+<div class="separator-small"></div>
+
+        <div class="row div_registro justify-content-center">
+        <div class="col-md-8">
 
             <div style="background-color:#c58845" class="alert alert-primary d-flex align-items-center" role="alert">
                 <div>
@@ -113,22 +186,7 @@
                     </tbody>
 
                 </table>
-            </div>
-            <nav class="nav_pagination"> </nav>
-
-          
-       
-        </div>
-        <div class="separator-small"></div>
-
-        
-       
-
-
-
-        </div>
-    </div>
-
+            </div></div>
 
             
 
